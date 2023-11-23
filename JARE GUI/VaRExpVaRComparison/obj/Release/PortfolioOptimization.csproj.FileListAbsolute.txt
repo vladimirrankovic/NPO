@@ -1,0 +1,60 @@
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Release\Approximation.exe
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Release\ResolveAssemblyReference.cache
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Release\Approximation.MainForm.resources
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Release\PortfolioOptimization.csproj.GenerateResource.Cache
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Release\Approximation.exe
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Release\AForge.Controls.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Release\AForge.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Release\AForge.Genetic.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Release\SharpMetal.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Release\AForge.Math.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Release\AForge.Video.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Release\SharpMetal.pdb
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\obj\Release\ResolveAssemblyReference.cache
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\obj\Release\Approximation.MainForm.resources
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\obj\Release\PortfolioOptimization.csproj.GenerateResource.Cache
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\bin\Release\Approximation.exe
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\bin\Release\AForge.Controls.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\bin\Release\AForge.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\bin\Release\AForge.Genetic.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\bin\Release\JARE.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\bin\Release\AForge.Math.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\bin\Release\AForge.Video.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\bin\Release\JARE.pdb
+K:\Programming\_FINANCE\Optimization\JARE\gui\PortfolioOptimization\obj\Release\Approximation.exe
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Release\Approximation.exe
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Release\ResolveAssemblyReference.cache
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Release\Approximation.MainForm.resources
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\Approximation.exe
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\AForge.Controls.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\AForge.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\AForge.Genetic.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\JARE.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\AForge.Math.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\AForge.Video.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\JARE.pdb
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\Approximation.exe.config
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\RDotNet.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Release\RDotNet.NativeLibrary.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Release\GenerateResource.read.1.tlog
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Release\GenerateResource.write.1.tlog
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\Approximation.exe.config
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\Approximation.exe
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\Approximation.exe
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\AForge.Controls.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\AForge.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\AForge.Genetic.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\JARE.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\RDotNet.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\AForge.Video.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\AForge.Math.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\RDotNet.NativeLibrary.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Release\JARE.pdb
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\ResolveAssemblyReference.cache
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\Approximation.MainForm.resources
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\GenerateResource.read.1.tlog
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\GenerateResource.write.1.tlog
+E:\Programming\FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\PortfolioOptimization.csprojAssemblyReference.cache
+E:\Programming\FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\Approximation.MainForm.resources
+E:\Programming\FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\PortfolioOptimization.csproj.GenerateResource.cache
+E:\Programming\FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Release\PortfolioOptimization.csproj.CoreCompileInputs.cache

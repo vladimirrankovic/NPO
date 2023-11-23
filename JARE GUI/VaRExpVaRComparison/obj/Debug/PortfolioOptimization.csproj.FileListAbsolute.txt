@@ -1,0 +1,66 @@
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\Approximation.exe
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\Approximation.pdb
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.Controls.dll
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.dll
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.Genetic.dll
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\SharpMetal.dll
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.Math.dll
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.Video.dll
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\SharpMetal.pdb
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\ResolveAssemblyReference.cache
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\Approximation.MainForm.resources
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\PortfolioOptimization.csproj.GenerateResource.Cache
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\Approximation.exe
+H:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\Approximation.pdb
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\Approximation.exe
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\Approximation.pdb
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\ResolveAssemblyReference.cache
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\Approximation.MainForm.resources
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\obj\Debug\PortfolioOptimization.csproj.GenerateResource.Cache
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\Approximation.exe
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\Approximation.pdb
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.Controls.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.Genetic.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\SharpMetal.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.Math.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\AForge.Video.dll
+K:\Programming\_FINANCE\#Metal\gui\PortfolioOptimization\bin\Debug\SharpMetal.pdb
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Debug\Approximation.exe
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Debug\Approximation.pdb
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\Approximation.exe
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\Approximation.pdb
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\AForge.Controls.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\AForge.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\AForge.Genetic.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\JARE.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\AForge.Math.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\AForge.Video.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\JARE.pdb
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Debug\ResolveAssemblyReference.cache
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Debug\Approximation.MainForm.resources
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Debug\GenerateResource-ResGen.read.1.tlog
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Debug\GenerateResource-ResGen.write.1.tlog
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\Approximation.exe.config
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\RDotNet.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\bin\Debug\RDotNet.NativeLibrary.dll
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Debug\GenerateResource.read.1.tlog
+K:\Programming\_FINANCE\Optimization\JARE\gui\VaRExpVaRComparison\obj\Debug\GenerateResource.write.1.tlog
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\Approximation.exe.config
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Debug\Approximation.exe
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Debug\Approximation.pdb
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Debug\ResolveAssemblyReference.cache
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Debug\Approximation.MainForm.resources
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Debug\GenerateResource.read.1.tlog
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\obj\Debug\GenerateResource.write.1.tlog
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\Approximation.exe
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\Approximation.pdb
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\AForge.Controls.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\AForge.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\AForge.Genetic.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\JARE.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\RDotNet.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\AForge.Video.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\AForge.Math.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\RDotNet.NativeLibrary.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\VaRExpVaRComparison\bin\Debug\JARE.pdb

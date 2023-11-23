@@ -1,0 +1,13 @@
+populationSize=20
+selectionMode=Elite
+functionsSet=Simple
+geneticMethod=GP
+iterations=10
+fitnessCriteria1=maximalVaRGarch
+fitnessCriteria2=none
+evaluationEndDate=12/23/2010
+interestRate=0
+evaluationPeriod=250
+weightParamDiscret=1
+varTreshold=5
+returnPeriod=1

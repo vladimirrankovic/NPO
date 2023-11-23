@@ -1,0 +1,91 @@
+/// <summary> BestSolutionSelection.java</summary>
+/// <author>  Antonio J. Nebro
+/// </author>
+/// <version>  1.0
+/// </version>
+using System;
+using JARE.Base;
+using BinaryTournamentComparator = JARE.Base.operators.comparator.BinaryTournamentComparator;
+using DominanceComparator = JARE.Base.operators.comparator.DominanceComparator;
+using ObjectiveComparator = JARE.Base.operators.comparator.ObjectiveComparator;
+using PseudoRandom = JARE.util.PseudoRandom;
+namespace JARE.Base.operators.selection
+{
+	
+	/// <summary> This class implements a selection operator used for selecting the best 
+	/// solution in a SolutionSet according to a given comparator
+	/// </summary>
+	[Serializable]
+	public class BestSolutionSelection:Selection
+	{
+		
+		// Comparator
+        private System.Collections.Generic.IComparer<JARE.Base.Solution> m_comparator;
+		
+		/// <summary> Constructor</summary>
+		/// <param name="comparator">
+		/// </param>
+        public BestSolutionSelection(System.Collections.Generic.IComparer<JARE.Base.Solution> comparator)
+		{
+			m_comparator = comparator;
+		}
+
+        /// <summary> Constructor</summary>
+        public BestSolutionSelection()
+        {
+            m_comparator = null;
+        }
+
+		
+		/// <summary> Performs the operation</summary>
+		/// <param name="object">Object representing a SolutionSet.
+		/// </param>
+		/// <returns> the best solution found
+		/// </returns>
+        public int getBestSolutionIndex(System.Object obj)
+		{
+			SolutionSet solutionSet = (SolutionSet) obj;
+			
+			if (solutionSet.size() == 0)
+			{
+				return 0;
+			}
+			int bestSolution;
+			
+			bestSolution = 0;
+
+            if (m_comparator == null)
+            {
+                try
+                {
+                    m_comparator = (System.Collections.Generic.IComparer<JARE.Base.Solution>)getParameter("comparator");
+                }
+                catch (System.Exception e)
+                {
+                    JARE.support.SupportClass.WriteStackTrace(e, Console.Error);
+                }
+            }
+            for (int i = 1; i < solutionSet.size(); i++)
+			{
+				if (m_comparator.Compare(solutionSet.getSolution(i), solutionSet.getSolution(bestSolution)) < 0)
+					bestSolution = i;
+			} // for
+			
+			return bestSolution;
+        } // getBestSolutionIndex 
+        //Vlada: Promenjeno kako bi bilo u skladu sa ostalim selection operatorima. Selection operatori vracaju Solution a ne index.
+
+        /// <summary> Performs the operation</summary>
+        /// <param name="object">Object representing a SolutionSet.
+        /// </param>
+        /// <returns> the best solution found
+        /// </returns>
+        public override System.Object execute(System.Object obj)
+        {
+            SolutionSet solutionSet = (SolutionSet)obj;
+            int bestSolutionIndex = getBestSolutionIndex(solutionSet);
+            return solutionSet.getSolution(bestSolutionIndex);
+            //return bestSolutionIndex;
+        } // Execute    
+	} // BestObjectiveSelection
+}

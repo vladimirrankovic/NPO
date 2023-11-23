@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using JARE.Base;
+using System.Threading;
+
+
+
+namespace JARE.EvaluationPool
+{
+    /// <summary> This class implements the NSGA-II algorithm. </summary>
+    [Serializable]
+    public class EvaluationPoolMultithread : EvaluationPool
+    {
+        int numOfThreadsAvailable;
+        ManualResetEvent[] workerIsFree;
+        //string logFilePath = String.Format("{0}\\error_{1}_{2}_{3}_{4}_{5}.txt", JARE.Properties.Settings.Default.LogFilesLocation, DateTime.Now.Year,
+        //    DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute);
+        //System.IO.StreamWriter sw;
+        Problem m_problem;
+
+
+        public EvaluationPoolMultithread(Problem p, int numOfThreads)
+            : base()
+        {
+            m_problem = p;
+            this.numOfThreadsAvailable = numOfThreads;
+            workerIsFree = new ManualResetEvent[this.numOfThreadsAvailable];
+            //if (System.IO.File.Exists(logFilePath))
+            //{
+            //    System.IO.File.Delete(logFilePath);
+            //}
+            //else
+            //{
+            //    sw = System.IO.File.CreateText(logFilePath);
+            //}
+        }
+
+
+        protected override void RunEvaluation()
+        {
+            for (int i = 0; i < numOfThreadsAvailable; i++)
+            {
+                workerIsFree[i] = new ManualResetEvent(true);
+            }
+            int freeThreadIndex = 0;
+            WorkerTaskMultithread task;
+            while (Count() > 0)
+            {
+                Solution solution = Dequeue();
+                task = new WorkerTaskMultithread(solution, workerIsFree[freeThreadIndex],freeThreadIndex);
+                workerIsFree[freeThreadIndex].Reset();
+                ThreadPool.QueueUserWorkItem(Do, task);
+                freeThreadIndex = WaitHandle.WaitAny(workerIsFree);
+            }
+            WaitHandle.WaitAll(workerIsFree);
+        }
+
+
+        private void Do(Object o)
+        {
+            WorkerTaskMultithread s = (WorkerTaskMultithread)o;
+           
+            try
+            {
+                m_problem.evaluate(s.solution);
+                //Console.WriteLine("Task done by thread number {0}", s.ThreadNo);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + ": " + e.Message);
+                SendSolution(s.solution);
+                Thread.Sleep(100);
+            }
+            s.a.Set();
+        }
+    }
+
+}
+

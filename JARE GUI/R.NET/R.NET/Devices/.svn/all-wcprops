@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Devices
+END
+CharacterDeviceAdapter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Devices/CharacterDeviceAdapter.cs
+END
+ConsoleDevice.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Devices/ConsoleDevice.cs
+END
+ICharacterDevice.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Devices/ICharacterDevice.cs
+END
+NullCharacterDevice.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Devices/NullCharacterDevice.cs
+END

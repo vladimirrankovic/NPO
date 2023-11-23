@@ -1,0 +1,15 @@
+G:\Programming\_FINANCE\Optimization\JARE_GUI\R.NET\R.NET\bin\Release\R.NET.dll.config
+G:\Programming\_FINANCE\Optimization\JARE_GUI\R.NET\R.NET\bin\Release\R.NET.XML
+G:\Programming\_FINANCE\Optimization\JARE_GUI\R.NET\R.NET\bin\Release\R.NET.dll
+G:\Programming\_FINANCE\Optimization\JARE_GUI\R.NET\R.NET\obj\Release\R.NET.csprojResolveAssemblyReference.cache
+G:\Programming\_FINANCE\Optimization\JARE_GUI\R.NET\R.NET\obj\Release\R.NET.dll
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\Release\R.NET.dll.config
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\Release\R.NET.XML
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\Release\R.NET.dll
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\Release\R.NET.csprojResolveAssemblyReference.cache
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\Release\R.NET.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\Release\R.NET.dll.config
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\Release\R.NET.XML
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\Release\R.NET.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\Release\R.NET.csprojResolveAssemblyReference.cache
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\Release\R.NET.dll

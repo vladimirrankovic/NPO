@@ -1,0 +1,187 @@
+
+using System;
+using SMException = JARE.util.SMException;
+using System.Collections.Generic;
+using System.Collections;
+namespace JARE.Base
+{
+	
+	/// <summary>This class implements a generic template for the algorithms developed in
+	/// JARE. Every algorithm must have a mapping between the parameters and 
+	/// and their names, and another mapping between the operators and their names. 
+	/// The class declares an abstract method called <code>execute</code>, which 
+	/// defines the behavior of the algorithm.
+	/// </summary>
+	[Serializable]
+	public abstract class Algorithm
+	{
+		
+		/// <summary> Stores the operators used by the algorithm, such as selection, crossover,
+		/// etc.
+		/// </summary>
+		//UPGRADE_ISSUE: The following fragment of code could not be parsed and was not converted. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1156'"
+        //protected Map < String, Operator > m_operators = null;
+
+        protected Dictionary < string, Operator> m_operators = null;
+		
+        /// <summary> Stores algorithm specific parameters. For example, in NSGA-II these
+		/// parameters include the population size and the maximum number of function
+		/// evaluations.
+		/// </summary>
+		//UPGRADE_ISSUE: The following fragment of code could not be parsed and was not converted. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1156'"
+		
+        //protected Map < String, Object > m_inputParameters = null;
+       
+        protected Dictionary <string, Object> m_inputParameters = null;
+		
+		/// <summary> Stores output parameters, which are retrieved by Main object to 
+		/// obtain information from an algorithm.
+		/// </summary>
+		//UPGRADE_ISSUE: The following fragment of code could not be parsed and was not converted. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1156'"
+		//protected Map < String, Object > outPutParameters = null;
+
+        protected Dictionary <string, Object> m_outPutParameters = null;
+		
+		/// <summary> Launches the execution of an specific algorithm.</summary>
+		/// <returns> a <code>SolutionSet</code> that is a set of non dominated solutions
+		/// as a result of the algorithm execution  
+		/// </returns>
+		
+        public abstract SolutionSet execute();
+		
+		/// <summary> Offers facilities for add new operators for the algorithm. To use an
+		/// operator, an algorithm has to obtain it through the 
+		/// <code>getOperator</code> method.
+		/// </summary>
+		/// <param name="name">The operator name
+		/// </param>
+		/// <param name="operator">The operator
+		/// </param>
+		
+        public virtual void  addOperator(string name, Operator op)
+		{
+            //if (operators == null)
+            //{
+            //    //UPGRADE_ISSUE: The following fragment of code could not be parsed and was not converted. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1156'"
+            //    operators = new HashMap < String, Operator >();
+            //}
+            //operators.put(name, operatorRenamed);
+
+            if (m_operators == null)
+            {
+                m_operators = new Dictionary<string, Operator>();
+            }
+            m_operators.Add(name, op);
+
+		} // addOperator 
+		
+		/// <summary> Gets an operator through his name. If the operator doesn't exist or the name 
+		/// is wrong this method returns null. The client of this method have to check 
+		/// the result of the method.
+		/// </summary>
+		/// <param name="name">The operator name
+		/// </param>
+		/// <returns> The operator if exists, null in another case.
+		/// </returns>
+		public virtual Operator getOperator(string name)
+		{
+			//return operators.get(name);
+            try
+            {
+                return m_operators[name];
+            }
+            catch (KeyNotFoundException)
+            {
+                return null;
+            }
+            
+		} // getOperator   
+		
+		/// <summary> Sets an input parameter to an algorithm. Typically,
+		/// the method is invoked by a Main object before running an algorithm. 
+		/// The parameters have to been inserted using their name to access them through 
+		/// the <code>getInputParameter</code> method.
+		/// </summary>
+		/// <param name="name">The parameter name
+		/// </param>
+		/// <param name="object">Object that represent a parameter for the
+		/// algorithm.
+		/// </param>
+		public virtual void  setInputParameter(string name, System.Object obj)
+		{
+            //if (inputParameters == null)
+            //{
+            //    //UPGRADE_ISSUE: The following fragment of code could not be parsed and was not converted. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1156'"
+            //    inputParameters = new Dictionary < string, Object >();
+            //}
+            //inputParameters.put(name, obj);
+
+            if (m_inputParameters == null)
+            {
+                m_inputParameters = new Dictionary<string, Object>();
+            }
+            m_inputParameters.Add(name, obj);
+
+		} 
+		
+		/// <summary> Gets an input parameter through its name. Typically,
+		/// the method is invoked by an object representing an algorithm
+		/// </summary>
+		/// <param name="name">The parameter name
+		/// </param>
+		/// <returns> Object representing the parameter or null if the parameter doesn't
+		/// exist or the name is wrong
+		/// </returns>
+		public virtual System.Object getInputParameter(string name)
+		{
+			//return inputParameters.get(name);
+            try
+            {
+                return m_inputParameters[name];
+            }
+            catch (KeyNotFoundException)
+            {
+                return null;
+            }
+
+		} 
+		
+		/// <summary> Sets an output parameter that can be obtained by invoking 
+		/// <code>getOutputParame</code>. Typically this algorithm is invoked by an
+		/// algorithm at the end of the <code>execute</code> to retrieve output 
+		/// information
+		/// </summary>
+		/// <param name="name">The output parameter name
+		/// </param>
+		/// <param name="object">Object representing the output parameter
+		/// </param>
+		public virtual void  setOutputParameter(string name, System.Object obj)
+		{
+			if (m_outPutParameters == null)
+			{
+				m_outPutParameters = new Dictionary < string, Object >();
+			}
+			m_outPutParameters.Add(name, obj);
+		}
+		
+		/// <summary> Gets an output parameter through its name. Typically,
+		/// the method is invoked by a Main object after the execution of an algorithm.
+		/// </summary>
+		/// <param name="name">The output parameter name
+		/// </param>
+		/// <returns> Object representing the output parameter, or null if the parameter
+		/// doesn't exist or the name is wrong.
+		/// </returns>
+		public virtual System.Object getOutputParameter(string name)
+		{
+            try
+            {
+                return m_outPutParameters[name];
+            }
+            catch (KeyNotFoundException)
+            {
+                return null;
+            }
+		} // getOutputParameter   
+	} // Algorithm
+}

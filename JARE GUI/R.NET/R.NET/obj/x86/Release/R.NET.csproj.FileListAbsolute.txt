@@ -1,0 +1,18 @@
+C:\Users\Srdjan\Desktop\New folder\lib\R.NET\R.NET\bin\x86\Release\R.NET.XML
+C:\Users\Srdjan\Desktop\New folder\lib\R.NET\R.NET\bin\x86\Release\R.NET.dll
+C:\Users\Srdjan\Desktop\New folder\lib\R.NET\R.NET\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Srdjan\Desktop\New folder\lib\R.NET\R.NET\obj\x86\Release\R.NET.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.dll.config
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.XML
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Release\R.NET.dll
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.dll.config
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.XML
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.dll
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Release\R.NET.dll
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.dll.config
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.XML
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Release\R.NET.dll
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Release\R.NET.csproj.AssemblyReference.cache
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Release\R.NET.csproj.CoreCompileInputs.cache
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Release\R.NET.dll

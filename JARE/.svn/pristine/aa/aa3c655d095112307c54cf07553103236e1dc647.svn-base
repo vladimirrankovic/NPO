@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using JARE.Base;
+using JARE.Base.solutionType;
+using JARE.problems;
+
+namespace JARE.problems
+{
+    public class PortfolioOptimizationSO : PortfolioOptimization
+    {
+        public double[] fitnessCriteriaExtremeValues;
+        public double[] weightParameter;
+
+        public PortfolioOptimizationSO(int numberOfObjectives, System.Collections.Generic.List<TimeSerie> Assets, 
+                                     DateTime evaluationEndDate, int evaluationPeriod, int ReturnPeriod,
+                                     double targetRate, double varThreshold, EvaluationCriteria[] evaluationCriteria,
+                                     double[] weightParameter, double[] fitnessCriteriaExtremeValues,
+                                     DecisionVariableType variableType) : base(Assets,
+                                     evaluationEndDate, evaluationPeriod, ReturnPeriod,
+                                     targetRate, varThreshold, evaluationCriteria, variableType)
+		{
+            m_numberOfObjectives = numberOfObjectives;
+            this.fitnessCriteriaExtremeValues = new double[fitnessCriteriaExtremeValues.Length];
+            this.fitnessCriteriaExtremeValues = fitnessCriteriaExtremeValues;
+            this.weightParameter = new double[weightParameter.Length];
+            this.weightParameter = weightParameter;
+        }
+
+        
+        public override void evaluate(Solution solution)
+        {
+            ponder.Clear();
+            for (int i = 0; i < m_numberOfVariables; i++) ponder.Add(solution.DecisionVariables[i]);
+
+            GeneratePortfolio();
+            double evaluationParameter = 0.0;
+            for (int i = 0; i < evaluationCriteria.Length; i++)
+            {
+                EvaluationCriteria EC = evaluationCriteria[i];
+                if (EC != EvaluationCriteria.none)
+                {
+                    evaluationParameter += (-EvaluationFunction(EC)) * weightParameter[i] / fitnessCriteriaExtremeValues[i];
+                }
+            }
+            solution.Fitness = evaluationParameter;
+        }
+     }
+}

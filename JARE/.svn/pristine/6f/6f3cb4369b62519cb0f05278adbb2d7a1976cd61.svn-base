@@ -1,0 +1,107 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using JARE.Base;
+using System.Threading;
+using System.Runtime.Serialization;
+using System.Diagnostics;
+using System.IO;
+
+
+namespace JARE.EvaluationPool
+{
+    public class WorkerTaskForBinder : WorkerTask
+    {
+        string script, dir, varFile; public int threadNo;
+        int numOfResults;
+        StreamWriter sw;
+        EvaluationResult er;
+
+        public WorkerTaskForBinder(Solution s, ManualResetEvent a,string script, string varFile, string dir, int n, int numOfResults):base(s,a)
+        {
+            this.dir = dir;
+            this.script = script;
+            this.threadNo = n;
+            this.numOfResults = numOfResults;
+            this.varFile = varFile;
+        }
+
+        public EvaluationResult ExecuteScript(Solution solution)
+        {
+            //Pravljeno za slucaj trazenja minimuma
+
+            // napravi argument bat-fajla, koji ce sadrzati putanju do fajla u koji su upisani parametri koji se variraju
+            // kao i broj parametara
+            Guid g;
+            g = Guid.NewGuid();
+            string filename = varFile + g.ToString() + ".dat";
+            string args =  filename + " " + solution.numberOfVariables().ToString();
+
+            // u varFile upisati vrednosti parametara
+            sw = new StreamWriter(filename);
+            for (int i = 0; i < solution.numberOfVariables(); i++)
+            {
+                sw.WriteLine(solution.DecisionVariables[i].getValue());
+            }
+            sw.Close();
+
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = script;
+            startInfo.WorkingDirectory = dir;
+            startInfo.UseShellExecute = false;
+            startInfo.RedirectStandardError = true;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.Arguments = args;
+            er = new EvaluationResult();
+            er.Message = "";
+            er.Result = new double[numOfResults];
+            try
+            {
+                Process exeProcess = Process.Start(startInfo);
+                string output = exeProcess.StandardOutput.ReadToEnd();
+                exeProcess.WaitForExit();
+                string[] rezultat = output.Split(';');
+                if (rezultat.Contains("OK"))
+                {
+                    er.Message = rezultat[1];
+                    for (int i = 0; i < numOfResults; i++)
+                    {
+                        er.Result[i] = double.Parse(rezultat[i+2]);
+                    }
+                    
+                }
+                else if (rezultat.Contains("EXE_FAILED"))
+                {
+                    Console.WriteLine("PROBLEM " + rezultat[1]);
+                    er.Message = "EXE_FAILED " + rezultat[1];
+                        for (int i = 0; i < numOfResults; i++)
+                        {
+                            er.Result[i] = double.MaxValue;
+                        }
+                }
+               
+                // kad iz nekog razloga worker ne odradi evaluaciju 
+                else
+                {
+                    er.Message = "FAILED";
+                    for (int i = 0; i < numOfResults; i++)
+                    {
+                        er.Result[i] = double.MaxValue;
+                    }
+                }
+                return er;
+            }
+            catch (Exception ex)
+            {
+                er.Message = "EXCEPTION " + ex.Message;
+                for (int i = 0; i < numOfResults; i++)
+                {
+                    er.Result[i] = double.MaxValue;
+                }
+                return er;
+            }
+
+        }
+    }
+}

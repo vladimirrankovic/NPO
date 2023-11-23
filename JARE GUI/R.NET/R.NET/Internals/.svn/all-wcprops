@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals
+END
+Constants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/Constants.cs
+END
+ParseStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/ParseStatus.cs
+END
+SaveActions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/SaveActions.cs
+END
+RStart.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/RStart.cs
+END
+SEXPREC_HEADER.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/SEXPREC_HEADER.cs
+END
+BusyType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/BusyType.cs
+END
+INativeMethodsProxy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/INativeMethodsProxy.cs
+END
+ConsoleOutputType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/ConsoleOutputType.cs
+END
+sxpinfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/sxpinfo.cs
+END
+VECTOR_SEXPREC.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/VECTOR_SEXPREC.cs
+END
+DirectNativeMethods.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/DirectNativeMethods.generated.cs
+END
+DelegateNativeMethods.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/DelegateNativeMethods.generated.cs
+END
+SymbolicExpressionType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/SymbolicExpressionType.cs
+END
+YesNoCancel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/YesNoCancel.cs
+END
+OutputMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/OutputMode.cs
+END
+DirectNativeMethods.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/DirectNativeMethods.cs
+END
+DelegateNativeMethods.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/DelegateNativeMethods.cs
+END
+SEXPREC.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Internals/SEXPREC.cs
+END

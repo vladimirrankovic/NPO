@@ -1,0 +1,51 @@
+#
+# File Client.properties describes parameters used for PBFS execution over binder
+#
+
+# Binder FQDN
+#BinderAddress = localhost
+BinderAddress = cream-ce.csk.kg.ac.rs
+#BinderAddress = kraguj.pmf.kg.ac.rs
+BinderPort = 4566
+
+# The list of CEs
+# CandidateCE = grid01.elfak.ni.ac.rs:8443/cream-pbs-aegis
+#CandidateCE = cream.mi.sanu.ac.rs:8443/cream-pbs-aegis cluster1.csk.kg.ac.rs:8443/cream-pbs-aegis cream.ipb.ac.rs:8443/cream-pbs-aegis
+#CandidateCE = kraguj.pmf.kg.ac.rs:8443/jobmanager-pbs-seegrid
+#CandidateCE = cream.mi.sanu.ac.rs:8443/cream-pbs-aegis
+# CandidateCE = site-a.x.y:2119/jobmanager-pbs-seegrid
+# CandidateCE = grid01.rcub.bg.ac.rs:8443/cream-pbs-aegis
+#CandidateCE = cream.ipb.ac.rs:8443/cream-pbs-aegis
+CandidateCE = cluster1.csk.kg.ac.rs:8443/cream-pbs-aegis
+
+# Application information
+ApplicationID = EXTERNAL
+RequiredWallClockTime = 1000
+
+
+# If running under WINE, path to WINE executable, otherwise leave empty
+PrefixToExecutable = 
+#PrefixToExecutable = /storage/exp_soft/wine/bin/wine
+
+# Path/filename to Windows/Linux executable (see PrefixToExecutable)
+#ExecutableFileName = pakfpar
+#ExecutableFileName = pakp.exe
+
+UseSSL = off
+
+# Built-in direct connection example:
+# AccessString = direct:147.91.204.82:8731
+
+
+# Built-in via Binder connection
+AccessString = 
+
+UseGridProxy = YES
+X509_USER_PROXY = x509up_u531
+Certificate = visnja_cert.p12
+CertificatePass = 
+#- path to the grid proxy, read only if UseGridProxy == YES (if omitted, default path is used).
+
+#Certificate - path to the PKCS#12 bundle, read only if UseGridProxy == NO
+#CertificatePass = 
+#- password to open the PKCS#12 bundle, read only if UseGridProxy == NO (NOTE: for security reasons it is not recommended to keep this password in a plain text file, it is best to prompt the user from the client each time) 

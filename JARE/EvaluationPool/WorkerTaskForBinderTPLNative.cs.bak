@@ -1,0 +1,163 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
+using JARE.Base;
+using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Text;
+
+namespace JARE.EvaluationPool
+{
+	public class WorkerTaskForBinderTPLNative
+	{
+		string script, dir,varFile;
+		public static event EventHandler<EventArgs> OK_FAILED;
+		int numOfResults, procTimeout;
+		StreamWriter sw;
+		EvaluationResult er;
+
+		//Djordje dodao
+		public WorkerTaskForBinderTPLNative(int numOfResults, int procTimeout)
+		{
+			this.numOfResults = numOfResults;
+			this.procTimeout = procTimeout;
+		}
+
+		public WorkerTaskForBinderTPLNative(string script, string varFile, string dir, int numOfResults, int procTimeout)
+		{
+			this.dir = dir;
+			this.script = script;
+			this.numOfResults = numOfResults;
+			this.varFile = varFile;
+			this.procTimeout = procTimeout;
+		}
+
+
+		public EvaluationResult ExecuteScript(Solution solution)
+		{
+			er = new EvaluationResult();
+			er.Message = "";
+			er.Result = new double[numOfResults];
+
+			try
+			{
+				DateTime startTime = DateTime.Now;
+
+				//create parameter array (not via file like in original code)
+				string[] parameters = new string[solution.numberOfVariables()];
+				for (int i = 0; i < solution.numberOfVariables(); i++)
+				{
+					parameters[i]=solution.DecisionVariables[i].getValue().ToString();
+				}
+
+				//create task, pass parameters and run it
+                //BinderClientCSharp.ClientExternal ce = new BinderClientCSharp.ClientExternal(parameters);
+                string clientPropFile = Directory.GetCurrentDirectory() + "\\ClientR.properties";
+
+                BinderClientCSharp.ClientR ce = new BinderClientCSharp.ClientR(parameters, clientPropFile);
+
+				Task clientTask = Task.Factory.StartNew(() => ce.run());
+
+				//wait task only until timeout (exit before, if task finises)
+				if(clientTask.Wait(procTimeout))
+				{
+					//get messages written to the console output.
+					String consoleOutput = ce.resultOutput.ToString();
+
+					//split by ; separator and remove empty entries
+					char[] separators = new char[] { ';' };
+					string[] splitedResultString = consoleOutput.Split (separators,StringSplitOptions.RemoveEmptyEntries);
+
+#warning Djordje Krecar: Ranije je trazio OK (umesto SUCCESS)
+
+					if (splitedResultString.Contains("SUCCESS"))
+					{
+						er.Status = EvaluationStatus.DONE;
+						double evaluationTime = (DateTime.Now - startTime).TotalSeconds;
+						er.Message = splitedResultString[1] + " Evaluation time = "+evaluationTime+" s.";
+
+                        int OK_index = -1;
+                        for (int j = 0; j < splitedResultString.Count(); j++)
+                        {
+                            if (splitedResultString[j] == "SUCCESS")
+                            {
+                                OK_index = j;
+                                break;
+                            }
+                        }
+
+                        for (int i = 0; i < numOfResults; i++)
+						{
+							er.Result[i] = double.Parse(splitedResultString[i + 2]);
+						}
+
+						if(OK_FAILED != null)
+							OK_FAILED(er.Message, null);
+					}
+					//kada nema spremnih jobova
+					else if (consoleOutput.Contains("No ready jobs available"))
+					{
+						er.Status = EvaluationStatus.NO_READY_JOBS;
+						er.Message = "No ready jobs available";
+
+						if (OK_FAILED != null)
+							OK_FAILED(er.Message, null);
+					}
+
+					//kada padne evaluacija
+					else if (splitedResultString.Contains("EXE_FAILED"))
+					{
+						er.Status = EvaluationStatus.FAILED;
+						er.Message = "EXE_FAILED " + splitedResultString[1];
+
+						for (int i = 0; i < numOfResults; i++)
+						{
+							er.Result[i] = double.MaxValue;
+						}
+
+						if (OK_FAILED != null)
+							OK_FAILED(er.Message, null);
+					}
+					// kad iz nekog razloga worker ne odradi evaluaciju 
+					else
+					{
+						er.Message = "FAILED";
+						er.Status = EvaluationStatus.FAILED;
+
+						if (OK_FAILED != null)
+							OK_FAILED(er.Message, null);
+					}
+					return er;
+				}
+				else
+				{
+					er.Message = "Timeout expired";
+					er.Status = EvaluationStatus.FAILED;
+
+					if (OK_FAILED != null)
+						OK_FAILED(er.Message, null);
+					return er;
+				}
+			}
+			catch (Exception ex)
+			{
+				er.Message = "EXCEPTION " + ex.Message;
+				er.Status = EvaluationStatus.FAILED;
+
+				for (int i = 0; i < numOfResults; i++)
+				{
+					er.Result[i] = double.MaxValue;
+				}
+
+				if (OK_FAILED != null)
+					OK_FAILED(er.Message, null);
+
+				return er;
+			}
+
+		}
+	}
+}
+

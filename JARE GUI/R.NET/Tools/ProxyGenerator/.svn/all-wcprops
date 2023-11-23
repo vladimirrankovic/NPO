@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/Tools/ProxyGenerator
+END
+DelegateNativeMethodsGenerator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/Tools/ProxyGenerator/DelegateNativeMethodsGenerator.cs
+END
+DirectNativeMethodsGenerator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/Tools/ProxyGenerator/DirectNativeMethodsGenerator.cs
+END
+IProxyGenerator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/Tools/ProxyGenerator/IProxyGenerator.cs
+END
+ProxyGenerator.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/Tools/ProxyGenerator/ProxyGenerator.csproj
+END
+Utility.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/Tools/ProxyGenerator/Utility.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/Tools/ProxyGenerator/Program.cs
+END

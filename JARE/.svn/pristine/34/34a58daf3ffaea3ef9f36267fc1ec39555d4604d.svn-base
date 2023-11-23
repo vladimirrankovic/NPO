@@ -1,0 +1,449 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <SchemaVersion>2.0</SchemaVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>JARE</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JARE</RootNamespace>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <ProjectGuid>{E1AF7D42-3D85-4174-A515-FED27DA161FF}</ProjectGuid>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>ADDITIONAL_INFORMATION </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="base\Algorithm.cs" />
+    <Compile Include="base\Operator.cs" />
+    <Compile Include="base\operators\comparator\AggregativeComparator.cs" />
+    <Compile Include="base\operators\comparator\BinaryTournamentComparator.cs" />
+    <Compile Include="base\operators\comparator\CrowdingComparator.cs" />
+    <Compile Include="base\operators\comparator\CrowdingDistanceComparator.cs" />
+    <Compile Include="base\operators\comparator\DistanceToPopulationComparator.cs" />
+    <Compile Include="base\operators\comparator\DominanceComparator.cs" />
+    <Compile Include="base\operators\comparator\EpsilonDominanceComparator.cs" />
+    <Compile Include="base\operators\comparator\EpsilonObjectiveComparator.cs" />
+    <Compile Include="base\operators\comparator\EqualSolutions.cs" />
+    <Compile Include="base\operators\comparator\FitnessAndCrowdingDistanceComparator.cs" />
+    <Compile Include="base\operators\comparator\FitnessComparator.cs" />
+    <Compile Include="base\operators\comparator\FPGAFitnessComparator.cs" />
+    <Compile Include="base\operators\comparator\ObjectiveComparator.cs" />
+    <Compile Include="base\operators\comparator\OverallConstraintViolationComparator.cs" />
+    <Compile Include="base\operators\comparator\RankComparator.cs" />
+    <Compile Include="base\operators\comparator\SolutionComparator.cs" />
+    <Compile Include="base\operators\comparator\ViolatedConstraintComparator.cs" />
+    <Compile Include="base\operators\crossover\WeightsCrossover.cs" />
+    <Compile Include="base\operators\crossover\Crossover.cs" />
+    <Compile Include="base\operators\crossover\CrossoverFactory.cs" />
+    <Compile Include="base\operators\crossover\DifferentialEvolutionCrossover.cs" />
+    <Compile Include="base\operators\crossover\Gradient.cs" />
+    <Compile Include="base\operators\crossover\HUXCrossover.cs" />
+    <Compile Include="base\operators\crossover\PMXCrossover.cs" />
+    <Compile Include="base\operators\crossover\SBXCrossover.cs" />
+    <Compile Include="base\operators\crossover\SinglePointCrossover.cs" />
+    <Compile Include="base\operators\crossover\TwoPointsCrossover.cs" />
+    <Compile Include="base\operators\crossover\WholeArithmeticCrossover.cs" />
+    <Compile Include="base\operators\localSearch\LocalSearch.cs" />
+    <Compile Include="base\operators\localSearch\MutationLocalSearch.cs" />
+    <Compile Include="base\operators\mutation\BitFlipMutation.cs" />
+    <Compile Include="base\operators\mutation\Mutation.cs" />
+    <Compile Include="base\operators\mutation\MutationFactory.cs" />
+    <Compile Include="base\operators\mutation\NonUniformMutation.cs" />
+    <Compile Include="base\operators\mutation\PolynomialMutation.cs" />
+    <Compile Include="base\operators\mutation\SwapMutation.cs" />
+    <Compile Include="base\operators\mutation\UniformMutation.cs" />
+    <Compile Include="base\operators\mutation\WeightsMutation.cs" />
+    <Compile Include="base\operators\selection\BestSolutionSelection.cs" />
+    <Compile Include="base\operators\selection\BinaryTournament.cs" />
+    <Compile Include="base\operators\selection\BinaryTournament2.cs" />
+    <Compile Include="base\operators\selection\DifferentialEvolutionSelection.cs" />
+    <Compile Include="base\operators\selection\PESA2Selection.cs" />
+    <Compile Include="base\operators\selection\RandomSelection.cs" />
+    <Compile Include="base\operators\selection\RankingAndCrowdingSelection.cs" />
+    <Compile Include="base\operators\selection\RouletteWheelSelection.cs" />
+    <Compile Include="base\operators\selection\Selection.cs" />
+    <Compile Include="base\operators\selection\SelectionFactory.cs" />
+    <Compile Include="base\operators\selection\WorstSolutionSelection.cs" />
+    <Compile Include="base\Problem.cs" />
+    <Compile Include="base\Solution.cs" />
+    <Compile Include="base\SolutionSet.cs" />
+    <Compile Include="base\SolutionType.cs" />
+    <Compile Include="base\solutionType\ArrayIntSolutionType.cs" />
+    <Compile Include="base\solutionType\ArrayRealSolutionType.cs" />
+    <Compile Include="base\solutionType\BinaryRealSolutionType.cs" />
+    <Compile Include="base\solutionType\BinarySolutionType.cs" />
+    <Compile Include="base\solutionType\IntRealSolutionType.cs" />
+    <Compile Include="base\solutionType\IntSolutionType.cs" />
+    <Compile Include="base\solutionType\PermutationSolutionType.cs" />
+    <Compile Include="base\solutionType\RealSolutionType.cs" />
+    <Compile Include="base\Variable.cs" />
+    <Compile Include="base\variable\ArrayInt.cs" />
+    <Compile Include="base\variable\ArrayReal.cs" />
+    <Compile Include="base\variable\Binary.cs" />
+    <Compile Include="base\variable\BinaryReal.cs" />
+    <Compile Include="base\variable\Int.cs" />
+    <Compile Include="base\variable\Permutation.cs" />
+    <Compile Include="base\variable\Real.cs" />
+    <Compile Include="base\variable\VariableFactory.cs" />
+    <Compile Include="EvaluationPool\EvalPoolMultiWorker.cs" />
+    <Compile Include="EvaluationPool\EvaluationPool.cs" />
+    <Compile Include="EvaluationPool\EvaluationPoolForBinder.cs" />
+    <Compile Include="EvaluationPool\EvaluationPoolMultithread.cs" />
+    <Compile Include="EvaluationPool\EvaluationPoolSequentional.cs" />
+    <Compile Include="EvaluationPool\EvaluationResult.cs" />
+    <Compile Include="EvaluationPool\EvaluationService.cs" />
+    <Compile Include="EvaluationPool\IWBEvaluation.cs" />
+    <Compile Include="EvaluationPool\IWSEvaluation.cs" />
+    <Compile Include="EvaluationPool\WcfEvaluationService.cs" />
+    <Compile Include="EvaluationPool\WorkerTask.cs" />
+    <Compile Include="EvaluationPool\WorkertaskForBinder.cs" />
+    <Compile Include="EvaluationPool\WorkerTaskForWS.cs" />
+    <Compile Include="EvaluationPool\WorkerTaskMultithread.cs" />
+    <Compile Include="experiments\Experiment.cs" />
+    <Compile Include="experiments\Settings.cs" />
+    <Compile Include="experiments\SettingsFactory.cs" />
+    <Compile Include="experiments\settings\AbYSS_Settings.cs" />
+    <Compile Include="experiments\settings\CellDE_Settings.cs" />
+    <Compile Include="experiments\settings\GDE3_Settings.cs" />
+    <Compile Include="experiments\settings\IBEA_Settings.cs" />
+    <Compile Include="experiments\settings\MOCell_Settings.cs" />
+    <Compile Include="experiments\settings\MOEAD_Settings.cs" />
+    <Compile Include="experiments\settings\NSGAIIBinary_Settings.cs" />
+    <Compile Include="experiments\settings\NSGAII_Settings.cs" />
+    <Compile Include="experiments\settings\OMOPSO_Settings.cs" />
+    <Compile Include="experiments\settings\PAES_Settings.cs" />
+    <Compile Include="experiments\settings\RandomSearch_Settings.cs" />
+    <Compile Include="experiments\settings\SMPSO_Settings.cs" />
+    <Compile Include="experiments\settings\SPEA2_Settings.cs" />
+    <Compile Include="experiments\util\RBoxplot.cs" />
+    <Compile Include="experiments\util\runExperiment.cs" />
+    <Compile Include="experiments\util\RWilcoxon.cs" />
+    <Compile Include="experiments\util\Statistics.cs" />
+    <Compile Include="metaheuristics\abyss\AbYSS.cs" />
+    <Compile Include="metaheuristics\abyss\AbYSS_main.cs" />
+    <Compile Include="metaheuristics\cellde\CellDE.cs" />
+    <Compile Include="metaheuristics\cellde\CellDE_main.cs" />
+    <Compile Include="metaheuristics\densea\DENSEA.cs" />
+    <Compile Include="metaheuristics\densea\DENSEA_main.cs" />
+    <Compile Include="metaheuristics\fastPGA\FastPGA.cs" />
+    <Compile Include="metaheuristics\fastPGA\FastPGA_main.cs" />
+    <Compile Include="metaheuristics\gde3\GDE3.cs" />
+    <Compile Include="metaheuristics\gde3\GDE3_main.cs" />
+    <Compile Include="metaheuristics\ibea\IBEA.cs" />
+    <Compile Include="metaheuristics\ibea\IBEA_main.cs" />
+    <Compile Include="metaheuristics\mocell\aMOCell1.cs" />
+    <Compile Include="metaheuristics\mocell\aMOCell2.cs" />
+    <Compile Include="metaheuristics\mocell\aMOCell3.cs" />
+    <Compile Include="metaheuristics\mocell\MOCell.cs" />
+    <Compile Include="metaheuristics\mocell\MOCell_main.cs" />
+    <Compile Include="metaheuristics\mocell\sMOCell1.cs" />
+    <Compile Include="metaheuristics\mocell\sMOCell2.cs" />
+    <Compile Include="metaheuristics\mochc\MOCHC.cs" />
+    <Compile Include="metaheuristics\mochc\MOCHC_main.cs" />
+    <Compile Include="metaheuristics\moead\MOEAD.cs" />
+    <Compile Include="metaheuristics\moead\MOEAD_main.cs" />
+    <Compile Include="metaheuristics\moead\pMOEAD.cs" />
+    <Compile Include="metaheuristics\moead\pMOEAD_main.cs" />
+    <Compile Include="metaheuristics\moead\Utils.cs" />
+    <Compile Include="metaheuristics\nsgaII\NSGAII.cs" />
+    <Compile Include="metaheuristics\nsgaII\NSGAIIEvalPool.cs" />
+    <Compile Include="metaheuristics\nsgaII\NSGAIIEvalPoolMultithread.cs" />
+    <Compile Include="metaheuristics\nsgaII\NSGAIIMultiWorker.cs" />
+    <Compile Include="metaheuristics\nsgaII\NSGAIIViaBinder.cs" />
+    <Compile Include="metaheuristics\nsgaII\NSGAII_main.cs" />
+    <Compile Include="metaheuristics\nsgaII\ssNSGAII.cs" />
+    <Compile Include="metaheuristics\omopso\OMOPSO.cs" />
+    <Compile Include="metaheuristics\omopso\OMOPSO_main.cs" />
+    <Compile Include="metaheuristics\paes\PAES.cs" />
+    <Compile Include="metaheuristics\paes\PAES_main.cs" />
+    <Compile Include="metaheuristics\pesa2\PESA2.cs" />
+    <Compile Include="metaheuristics\pesa2\PESA2_main.cs" />
+    <Compile Include="metaheuristics\randomSearch\RandomSearch.cs" />
+    <Compile Include="metaheuristics\randomSearch\RandomSearch_main.cs" />
+    <Compile Include="metaheuristics\singleObjective\differentialEvolution\DE.cs" />
+    <Compile Include="metaheuristics\singleObjective\differentialEvolution\DE_main.cs" />
+    <Compile Include="metaheuristics\singleObjective\evolutionStrategy\ElitistES.cs" />
+    <Compile Include="metaheuristics\singleObjective\evolutionStrategy\ES_main.cs" />
+    <Compile Include="metaheuristics\singleObjective\evolutionStrategy\NonElitistES.cs" />
+    <Compile Include="metaheuristics\singleObjective\geneticAlgorithm\acGA.cs" />
+    <Compile Include="metaheuristics\singleObjective\geneticAlgorithm\PortfolioOptimizationGA.cs" />
+    <Compile Include="metaheuristics\singleObjective\geneticAlgorithm\SvenssonGA.cs" />
+    <Compile Include="metaheuristics\singleObjective\geneticAlgorithm\GA_main.cs" />
+    <Compile Include="metaheuristics\singleObjective\geneticAlgorithm\gGA.cs" />
+    <Compile Include="metaheuristics\singleObjective\geneticAlgorithm\scGA.cs" />
+    <Compile Include="metaheuristics\singleObjective\geneticAlgorithm\ssGA.cs" />
+    <Compile Include="metaheuristics\singleObjective\geneticAlgorithm\TSPGA_main.cs" />
+    <Compile Include="metaheuristics\smpso\SMPSO.cs" />
+    <Compile Include="metaheuristics\smpso\SMPSO_main.cs" />
+    <Compile Include="metaheuristics\spea2\SPEA2.cs" />
+    <Compile Include="metaheuristics\spea2\SPEA2_main.cs" />
+    <Compile Include="problems\Binh2.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF1.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF10.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF2.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF3.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF4.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF5.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF6.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF7.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF8.cs" />
+    <Compile Include="problems\cec2009Competition\CEC2009_UF9.cs" />
+    <Compile Include="problems\ConstrEx.cs" />
+    <Compile Include="problems\LZ09\DTLZ\DTLZ1.cs" />
+    <Compile Include="problems\LZ09\DTLZ\DTLZ2.cs" />
+    <Compile Include="problems\LZ09\DTLZ\DTLZ3.cs" />
+    <Compile Include="problems\LZ09\DTLZ\DTLZ4.cs" />
+    <Compile Include="problems\LZ09\DTLZ\DTLZ5.cs" />
+    <Compile Include="problems\LZ09\DTLZ\DTLZ6.cs" />
+    <Compile Include="problems\LZ09\DTLZ\DTLZ7.cs" />
+    <Compile Include="problems\Fonseca.cs" />
+    <Compile Include="problems\Golinski.cs" />
+    <Compile Include="problems\IntRealProblem.cs" />
+    <Compile Include="problems\Kursawe.cs" />
+    <Compile Include="problems\LZ09\LZ09.cs" />
+    <Compile Include="problems\LZ09\LZ09_F1.cs" />
+    <Compile Include="problems\LZ09\LZ09_F2.cs" />
+    <Compile Include="problems\LZ09\LZ09_F3.cs" />
+    <Compile Include="problems\LZ09\LZ09_F4.cs" />
+    <Compile Include="problems\LZ09\LZ09_F5.cs" />
+    <Compile Include="problems\LZ09\LZ09_F6.cs" />
+    <Compile Include="problems\LZ09\LZ09_F7.cs" />
+    <Compile Include="problems\LZ09\LZ09_F8.cs" />
+    <Compile Include="problems\LZ09\LZ09_F9.cs" />
+    <Compile Include="problems\OKA1.cs" />
+    <Compile Include="problems\OKA2.cs" />
+    <Compile Include="problems\Osyczka2.cs" />
+    <Compile Include="problems\Poloni.cs" />
+    <Compile Include="problems\PortfolioOptimization\PortfolioOptimization.cs" />
+    <Compile Include="problems\PortfolioOptimization\PortfolioOptimizationMO.cs" />
+    <Compile Include="problems\PortfolioOptimization\PortfolioOptimizationSO.cs" />
+    <Compile Include="problems\PortfolioOptimization\VaRExpVaRComparison.cs" />
+    <Compile Include="problems\ProblemFactory.cs" />
+    <Compile Include="problems\RadioNetworkDesign.cs" />
+    <Compile Include="problems\Schaffer.cs" />
+    <Compile Include="problems\singleObjective\Griewank.cs" />
+    <Compile Include="problems\singleObjective\MaxSin2.cs" />
+    <Compile Include="problems\singleObjective\OneMax.cs" />
+    <Compile Include="problems\singleObjective\Sphere.cs" />
+    <Compile Include="problems\singleObjective\testZaMilovana.cs" />
+    <Compile Include="problems\singleObjective\TSP.cs" />
+    <Compile Include="problems\Srinivas.cs" />
+    <Compile Include="problems\Tanaka.cs" />
+    <Compile Include="problems\Viennet2.cs" />
+    <Compile Include="problems\Viennet3.cs" />
+    <Compile Include="problems\Viennet4.cs" />
+    <Compile Include="problems\Water.cs" />
+    <Compile Include="problems\WFG\Shapes.cs" />
+    <Compile Include="problems\WFG\Transformations.cs" />
+    <Compile Include="problems\WFG\WFG.cs" />
+    <Compile Include="problems\WFG\WFG1.cs" />
+    <Compile Include="problems\WFG\WFG2.cs" />
+    <Compile Include="problems\WFG\WFG3.cs" />
+    <Compile Include="problems\WFG\WFG4.cs" />
+    <Compile Include="problems\WFG\WFG5.cs" />
+    <Compile Include="problems\WFG\WFG6.cs" />
+    <Compile Include="problems\WFG\WFG7.cs" />
+    <Compile Include="problems\WFG\WFG8.cs" />
+    <Compile Include="problems\WFG\WFG9.cs" />
+    <Compile Include="problems\ZDT\ZDT1.cs" />
+    <Compile Include="problems\ZDT\ZDT2.cs" />
+    <Compile Include="problems\ZDT\ZDT3.cs" />
+    <Compile Include="problems\ZDT\ZDT4.cs" />
+    <Compile Include="problems\ZDT\ZDT5.cs" />
+    <Compile Include="problems\ZDT\ZDT6.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="qualityIndicator\Epsilon.cs" />
+    <Compile Include="qualityIndicator\GeneralizedSpread.cs" />
+    <Compile Include="qualityIndicator\GenerationalDistance.cs" />
+    <Compile Include="qualityIndicator\Hypervolume.cs" />
+    <Compile Include="qualityIndicator\InvertedGenerationalDistance.cs" />
+    <Compile Include="qualityIndicator\QualityIndicator.cs" />
+    <Compile Include="qualityIndicator\Spread.cs" />
+    <Compile Include="qualityIndicator\util\LexicoGraphicalComparator.cs" />
+    <Compile Include="qualityIndicator\util\MetricsUtil.cs" />
+    <Compile Include="qualityIndicator\util\ValueComparator.cs" />
+    <Compile Include="support\BackInputStream.cs" />
+    <Compile Include="support\BackReader.cs" />
+    <Compile Include="support\BackStringReader.cs" />
+    <Compile Include="support\ButtonSupport.cs" />
+    <Compile Include="support\CheckBoxSupport.cs" />
+    <Compile Include="support\CollectionsSupport.cs" />
+    <Compile Include="support\CommandManager.cs" />
+    <Compile Include="support\DialogSupport.cs" />
+    <Compile Include="support\FileDialogSupport.cs" />
+    <Compile Include="support\FormSupport.cs" />
+    <Compile Include="support\GraphicsHashTable.cs" />
+    <Compile Include="support\GraphicsManager.cs" />
+    <Compile Include="support\HashSetSupport.cs" />
+    <Compile Include="support\ICollectionSupport.cs" />
+    <Compile Include="support\ISetSupport.cs" />
+    <Compile Include="support\IThreadRunnable.cs" />
+    <Compile Include="support\Line2DSupport.cs" />
+    <Compile Include="support\MapSupport.cs" />
+    <Compile Include="support\OptionPaneSupport.cs" />
+    <Compile Include="support\StreamTokenizerSupport.cs" />
+    <Compile Include="support\SupportClass.cs" />
+    <Compile Include="support\TabControlSupport.cs" />
+    <Compile Include="support\ThreadClass.cs" />
+    <Compile Include="support\Tokenizer.cs" />
+    <Compile Include="util\AdaptiveGrid.cs" />
+    <Compile Include="util\archive\AdaptiveGridArchive.cs" />
+    <Compile Include="util\archive\Archive.cs" />
+    <Compile Include="util\archive\CrowdingArchive.cs" />
+    <Compile Include="util\archive\StrengthRawFitnessArchive.cs" />
+    <Compile Include="util\Configuration.cs" />
+    <Compile Include="util\Distance.cs" />
+    <Compile Include="util\DistanceNode.cs" />
+    <Compile Include="util\DistanceNodeComparator.cs" />
+    <Compile Include="util\FPGAFitness.cs" />
+    <Compile Include="util\JMException.cs" />
+    <Compile Include="util\Logger.cs" />
+    <Compile Include="util\Neighborhood.cs" />
+    <Compile Include="util\NonDominatedSolutionList.cs" />
+    <Compile Include="util\Permutation.cs" />
+    <Compile Include="util\PermutationUtility.cs" />
+    <Compile Include="util\PseudoRandom.cs" />
+    <Compile Include="util\RandomGenerator.cs" />
+    <Compile Include="util\Ranking.cs" />
+    <Compile Include="util\Spea2Fitness.cs" />
+    <Compile Include="util\TimeUtil.cs" />
+    <Compile Include="util\wrapper\XInt.cs" />
+    <Compile Include="util\wrapper\XReal.cs" />
+    <None Include="App.config" />
+    <None Include="metaheuristics\gde3\.cvsignore" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Projekti\Cerni\Ibar\ZaIbar1Solution\IbarHydroCalc\HydroPowerCalcLib\HydroPowerCalcLib.csproj">
+      <Project>{C891F47B-E9FF-450E-959A-C12363DA07C7}</Project>
+      <Name>HydroPowerCalcLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projekti\Cerni\Ibar\ZaIbar1Solution\IbarHydroCalc\SimpleOptim\SimpleOptim.csproj">
+      <Project>{3CAB9727-B227-46BA-8CB3-11571D6CC462}</Project>
+      <Name>SimpleOptim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projekti\Cerni\Prvonek\PrvonekSimNew\PrvonekModel\PrvonekModel.csproj">
+      <Project>{4EF1B0AE-33DF-47CA-8ADB-E6183A070172}</Project>
+      <Name>PrvonekModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

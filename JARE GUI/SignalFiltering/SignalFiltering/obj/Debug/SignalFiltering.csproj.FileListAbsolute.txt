@@ -1,0 +1,10 @@
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\bin\Debug\SignalFiltering.exe.config
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\bin\Debug\SignalFiltering.exe
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\bin\Debug\SignalFiltering.pdb
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\obj\Debug\SignalFiltering.csprojAssemblyReference.cache
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\obj\Debug\SignalFiltering.Properties.Resources.resources
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\obj\Debug\SignalFiltering.csproj.GenerateResource.cache
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\obj\Debug\SignalFiltering.csproj.CoreCompileInputs.cache
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\obj\Debug\SignalFiltering.exe
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\obj\Debug\SignalFiltering.pdb
+E:\Programming\FINANCE\Optimization\JARE GUI\SignalFiltering\SignalFiltering\obj\Debug\SignalFiltering.MainForm.resources

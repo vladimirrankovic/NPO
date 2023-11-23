@@ -1,0 +1,178 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+using JARE.Base;
+using JARE.Base.solutionType;
+using JARE.problems;
+using PortfolioOptimizationGA = JARE.metaheuristics.singleObjective.geneticAlgorithm.PortfolioOptimizationGA;
+
+namespace JARE.problems
+{
+    public class VaRExpVaRComparison
+    {
+        PortfolioOptimizationSO po;
+        System.Collections.Generic.List<TimeSerie> Assets;
+        DateTime evaluationEndDate;
+        int evaluationPeriod;
+        int ReturnPeriod;
+        double varThreshold;
+        PortfolioOptimization.DecisionVariableType variableType;
+        int testingPeriod;
+
+        public VaRExpVaRComparison(System.Collections.Generic.List<TimeSerie> Assets, 
+                                     DateTime evaluationEndDate, int evaluationPeriod, int ReturnPeriod,
+                                     double varThreshold, PortfolioOptimization.DecisionVariableType variableType, int testingPeriod)
+		{
+            this.Assets = new List<TimeSerie>(Assets);
+            this.evaluationEndDate = evaluationEndDate;
+            this.evaluationPeriod = evaluationPeriod;
+            this.ReturnPeriod = ReturnPeriod;
+            this.varThreshold = varThreshold;
+            this.variableType = variableType;
+            this.testingPeriod = testingPeriod;
+
+        }
+
+        public void Execute(StreamWriter sw)
+        {
+            double[] weightParameter = new double[2]{1.0, 0.0};
+            double[] tmp = new double[2]{1.0, 1.0};
+            PortfolioOptimization.EvaluationCriteria[] EC = new PortfolioOptimization.EvaluationCriteria[1]{PortfolioOptimization.EvaluationCriteria.maximalVaR};
+
+            JARE.Base.SolutionSet s = new SolutionSet();
+            DateTime EndDateTmp = evaluationEndDate;
+
+            string strParameters = "date,averageReturn,standardDeviation,sharpIndex,sortinoIndex,VaR,cVaR,expVaR,expcVaR,Skewness,Kurtosis,Return";
+            sw.WriteLine(strParameters);
+            int counter = 0;
+            int i = 0;
+
+            while(counter < testingPeriod)
+            {
+                EndDateTmp = evaluationEndDate.AddDays(i);
+                if (EndDateTmp.DayOfWeek == DayOfWeek.Saturday || EndDateTmp.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    i++;
+                    continue;
+                }
+
+                po = new PortfolioOptimizationSO(1, Assets, EndDateTmp, evaluationPeriod, ReturnPeriod, 0, varThreshold, EC, weightParameter, tmp, PortfolioOptimization.DecisionVariableType.capitalInvestedProportionType);
+                AlgorithmExecution(po, ref s);
+
+                JARE.Base.Solution bestSolution = s.getSolution(s.size() - 1);
+                po.evaluate(bestSolution);
+                PrintResults(sw);
+
+                EndDateTmp = EndDateTmp.AddDays(1);
+                while (EndDateTmp.DayOfWeek == DayOfWeek.Saturday || EndDateTmp.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    EndDateTmp = EndDateTmp.AddDays(1);
+                }
+                po = new PortfolioOptimizationSO(1, Assets, EndDateTmp, evaluationPeriod, ReturnPeriod, 0, varThreshold, EC, weightParameter, tmp, PortfolioOptimization.DecisionVariableType.capitalInvestedProportionType);
+                po.evaluate(bestSolution);
+                PrintResults(sw);
+
+                counter++;
+                i++;
+            }
+
+            EC[0] = PortfolioOptimization.EvaluationCriteria.maximalExpWeightedVaR;
+
+            counter = 0;
+            i = 0;
+            while (counter < testingPeriod)
+            {
+                EndDateTmp = evaluationEndDate.AddDays(i);
+                if (EndDateTmp.DayOfWeek == DayOfWeek.Saturday || EndDateTmp.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    i++;
+                    continue;
+                }
+
+                po = new PortfolioOptimizationSO(1, Assets, EndDateTmp, evaluationPeriod, ReturnPeriod, 0, varThreshold, EC, weightParameter, tmp, PortfolioOptimization.DecisionVariableType.capitalInvestedProportionType);
+                AlgorithmExecution(po, ref s); // Generational GA with fitness
+
+                JARE.Base.Solution bestSolution = s.getSolution(s.size() - 1);
+                po.evaluate(bestSolution);
+                PrintResults(sw);
+
+                EndDateTmp = EndDateTmp.AddDays(1);
+                while (EndDateTmp.DayOfWeek == DayOfWeek.Saturday || EndDateTmp.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    EndDateTmp = EndDateTmp.AddDays(1);
+                }
+                po = new PortfolioOptimizationSO(1, Assets, EndDateTmp, evaluationPeriod, ReturnPeriod, 0, varThreshold, EC, weightParameter, tmp, PortfolioOptimization.DecisionVariableType.capitalInvestedProportionType);
+                po.evaluate(bestSolution);
+                PrintResults(sw);
+
+                counter++;
+                i++;
+            }
+            sw.Dispose();
+        }
+
+        private void AlgorithmExecution(PortfolioOptimizationSO po, ref JARE.Base.SolutionSet s)
+        {
+            PortfolioOptimizationGA algorithm; // The algorithm to use
+            Operator crossover; // Crossover operator
+            Operator mutation; // Mutation operator
+            Operator selection; // Selection operator
+
+            // Mutation and Crossover for Real codification 
+            crossover = JARE.Base.operators.crossover.CrossoverFactory.getCrossoverOperator("WeightsSinglePointCrossover");
+            crossover.setParameter("probability", 1.0);
+            crossover.setParameter("distributionIndex", 20.0);
+
+            mutation = JARE.Base.operators.mutation.MutationFactory.getMutationOperator("WeightsUniformMutation");
+            mutation.setParameter("probability", 0.5);
+            mutation.setParameter("perturbationIndex", 0.2);
+
+            /* Selection Operator */
+            selection = JARE.Base.operators.selection.SelectionFactory.getSelectionOperator("WorstSolutionSelection");
+            JARE.Base.operators.comparator.FitnessComparator comparator = new JARE.Base.operators.comparator.FitnessComparator();
+            selection.setParameter("comparator", comparator);
+            Operator selectionPopulation = JARE.Base.operators.selection.SelectionFactory.getSelectionOperator("RouletteWheelSelection");
+            int populationSize = Assets.Count * 5;
+            selectionPopulation.setParameter("size", populationSize - 1);
+
+            algorithm = new PortfolioOptimizationGA(po); // Generational GA with fitness
+
+            /* Algorithm parameters*/
+            algorithm.setInputParameter("populationSize", populationSize);
+            algorithm.setInputParameter("maxEvaluations", 200);
+            /* Add the operators to the algorithm*/
+            algorithm.addOperator("crossover", crossover);
+            algorithm.addOperator("mutation", mutation);
+            algorithm.addOperator("selection", selection);
+            algorithm.addOperator("selectionPopulation", selectionPopulation);
+            ((PortfolioOptimizationGA)algorithm).Init();
+
+            s = algorithm.execute();
+        }
+
+        void PrintResults(StreamWriter sw)
+        {
+            string strParameters;
+            ////double[] parametersForOptimalPortfolio = new double[11];
+            List<double> parametersForOptimalPortfolio = new List<double>();
+            string str = string.Empty;
+
+            str = po.GetParametersForOptimalPortfolio(parametersForOptimalPortfolio);
+            strParameters = string.Empty;
+            strParameters += po.evaluationEndDate.Date.ToShortDateString() + ",";
+
+            for (int kk = 0; kk < parametersForOptimalPortfolio.Count; kk++)
+            {
+                strParameters += (parametersForOptimalPortfolio[kk].ToString("F10") + ",");
+            }
+            for (int kk = 0; kk < po.ponder.Count; kk++)
+            {
+                strParameters += (po.ponder[kk].getValue().ToString("F10") + ",");
+            }
+            //strParameters += "\n";
+            sw.WriteLine(strParameters);
+        }
+        
+    }
+}

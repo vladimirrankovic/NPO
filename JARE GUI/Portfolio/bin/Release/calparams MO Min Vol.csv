@@ -1,0 +1,26 @@
+Population size,100
+Generations,100
+Mutation probability,0.05
+Mutation perturbation,0.1
+Evaluation period,1000
+Return period,1000
+Interest rate,0
+VaR treshhold,1
+Lambda,0.99
+Rebal. period,100
+Rebal. buffer,5
+Criteria change,1
+Optimization Date,2013-07-31 00:00:00
+Rebal. Start Date,2013-07-31 00:00:00
+Variable type,0
+Fitness criteria 1,1
+Fitness criteria 2,16
+Fitness criteria 3,0
+Rebal. criteria,11
+Crossover probability,1
+CRType,0
+CR change,-1
+Backtesting period,250
+TurnOver limit type,3
+MultiObjective Tolerance,0.0005
+MultiObjective Plateau Generations,10

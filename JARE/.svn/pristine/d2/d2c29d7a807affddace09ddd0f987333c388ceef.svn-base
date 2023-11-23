@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using JARE.Base;
+
+namespace JARE.EvaluationPool
+{
+    class EvaluationPoolMultiWorker : EvaluationPool
+    {
+        int numOfThreadsAvailable;
+        ManualResetEvent[] workerIsFree;
+        List<string> workerNames = new List<string>();
+        string logFilePath = String.Format("{0}\\error_{1}_{2}_{3}_{4}_{5}.txt", JARE.Properties.Settings.Default.LogFilesLocation, DateTime.Now.Year,
+            DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute);
+        System.IO.StreamWriter sw;
+        
+
+        List<WcfEvaluationServiceClient> workerList;
+        IWSEvaluation problem;
+        public EvaluationPoolMultiWorker(IWSEvaluation problem, List<WcfEvaluationServiceClient> workerList, List<string> workerNames)
+            : base()
+        {
+            this.problem = problem;
+            this.workerList = workerList;
+            this.numOfThreadsAvailable = workerList.Count;
+            workerIsFree = new ManualResetEvent[this.numOfThreadsAvailable];
+            this.workerNames = workerNames;
+            if (System.IO.File.Exists(logFilePath))
+            {
+                System.IO.File.Delete(logFilePath);
+            }
+            else
+            {
+                sw = System.IO.File.CreateText(logFilePath);
+            }
+        }
+
+
+        protected override void RunEvaluation()
+        {
+            for (int i = 0; i < numOfThreadsAvailable; i++)
+            {
+                workerIsFree[i] = new ManualResetEvent(true);
+            }
+            int freeThreadIndex = 0;
+            WorkerTask task;
+            while (Count() > 0)
+            {
+                Solution solution = Dequeue();
+                task = new WorkerTaskForWS(workerList[freeThreadIndex], workerNames[freeThreadIndex], solution, workerIsFree[freeThreadIndex]);
+                workerIsFree[freeThreadIndex].Reset();
+                ThreadPool.QueueUserWorkItem(Do, task);
+
+                freeThreadIndex = WaitHandle.WaitAny(workerIsFree);
+            }
+            WaitHandle.WaitAll(workerIsFree);
+        }
+
+
+        private void Do(Object o)
+        {
+            WcfEvaluationServiceLibrary.EvaluationResult er;
+            WorkerTaskForWS s = (WorkerTaskForWS)o;
+            Console.WriteLine("Task sent to " + s.workerName);
+            string logFilePath = JARE.Properties.Settings.Default.LogFilesLocation + "\\error.txt";
+
+            try
+            {
+                er = s.Worker.Evaluate(problem.VariablesToJobParameters(s.Solution));
+
+                if (!er.Message.Contains("OK"))
+                {
+                    sw = System.IO.File.AppendText(logFilePath);
+                    sw.WriteLine("Web servise " + s.workerName + " reported: " +
+                                    er.Message + " while trying to evaluate solution:");
+                    sw.WriteLine(problem.WriteError(s.Solution));
+                    Console.WriteLine("Web servise " + s.workerName + " reported: " + er.Message);
+                    sw.Close();
+                }
+
+                problem.JobResultsToObjectives(er, s.Solution);
+                Console.WriteLine("Result received from " + s.workerName + " " + ((-1) * s.Solution.getObjective(0)).ToString() + " " + ((-1) * s.Solution.getObjective(1)).ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error on " + s.workerName + ": " + e.Message);
+                SendSolution(s.Solution);
+                //Thread.Sleep(1000);
+            }
+
+            s.a.Set();
+        }
+    }
+
+    
+}
+

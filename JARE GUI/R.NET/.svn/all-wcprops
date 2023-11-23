@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/his-svn/!svn/ver/3625/trunk/src/UserServer/HisReg/lib/R.NET
+END
+.hgignore
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/.hgignore
+END
+R.NET.sln
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET.sln
+END
+R.NET.shfbproj
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET.shfbproj
+END
+.hg_archival.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/.hg_archival.txt
+END
+.hgtags
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/.hgtags
+END
+R.NET.suo
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/his-svn/!svn/ver/3625/trunk/src/UserServer/HisReg/lib/R.NET/R.NET.suo
+END

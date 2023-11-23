@@ -1,0 +1,12 @@
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Release\ResolveAssemblyReference.cache
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Release\Approximation.MainForm.resources
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Release\Approximation.csproj.GenerateResource.Cache
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Release\Approximation.exe
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Release\AForge.Video.dll
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Release\Approximation.exe
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Release\Approximation.exe
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Release\Approximation.exe
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Release\AForge.Video.dll
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Release\ResolveAssemblyReference.cache
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Release\Approximation.MainForm.resources
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Release\Approximation.csproj.GenerateResource.Cache

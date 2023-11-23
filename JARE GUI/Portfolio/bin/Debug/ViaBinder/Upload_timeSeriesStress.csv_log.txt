@@ -1,0 +1,21 @@
+
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Debug\ViaBinder># Upload fajla koji se navodi kao argument na klaster. Tamo se pojavljuje sa sufiksom "-uploaded" 
+
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Debug\ViaBinder>java -cp log4j-1.2.15.jar;binderR.jar rs.ac.kg.pmf.R.UploadClient "H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Debug\ViaBinder\timeSeriesStress.csv" 
+2015-11-18 10:59:08,067 INFO  [rs.ac.kg.pmf.R.ClientR] (TestClient) Starting UPLOAD client...
+2015-11-18 10:59:08,067 INFO  [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Initiating connection to the binder in order to execute the query.
+2015-11-18 10:59:08,087 INFO  [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Connection established.
+2015-11-18 10:59:08,087 DEBUG [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Query finished, disconnecting from the binder.
+CE list match report by the binder, total of 1 CEs matched.
+CE: Site-A, full name/path: cluster1.csk.kg.ac.rs:8443/cream-pbs-aegis, ready jobs: 97, CE: Site-A is filtered: [TEST, EXTERNAL, external-example, UPLOAD], currently supported apps: [TEST, EXTERNAL, UPLOAD].
+2015-11-18 10:59:08,097 INFO  [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Initiating connection to the binder.
+2015-11-18 10:59:08,097 INFO  [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Connection established.
+2015-11-18 10:59:08,107 DEBUG [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Routing info received from worker: 
+	Client => cream-ce.csk.kg.ac.rs : 8666
+	Worker => cream-ce.csk.kg.ac.rs : 54978
+		Received from starting script: Started_at_1447836206495
+2015-11-18 10:59:08,107 DEBUG [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Client exchanged headers with the binder.
+2015-11-18 10:59:08,107 DEBUG [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Communication via binder chosen.
+File timeSeriesStress.csv successfully uploaded.
+2015-11-18 10:59:08,937 INFO  [rs.ac.kg.pmf.R.ClientR] (TestClient) End of UPLOAD client, disconnecting from binder...
+2015-11-18 10:59:08,937 INFO  [yu.ac.bg.rcub.binder.handler.client.ClientConnectorImpl] (TestClient) Disconnected from binder.

@@ -1,0 +1,72 @@
+E:\Programming\_FINANCE\JARE GUI\Portfolio\bin\Release\Portfolio.exe.config
+E:\Programming\_FINANCE\JARE GUI\Portfolio\bin\Release\Portfolio.exe
+E:\Programming\_FINANCE\JARE GUI\Portfolio\bin\Release\JARE.dll
+E:\Programming\_FINANCE\JARE GUI\Portfolio\bin\Release\R.NET.dll
+E:\Programming\_FINANCE\JARE GUI\Portfolio\bin\Release\JARE.pdb
+E:\Programming\_FINANCE\JARE GUI\Portfolio\obj\Release\Portfolio.csprojResolveAssemblyReference.cache
+E:\Programming\_FINANCE\JARE GUI\Portfolio\obj\Release\PortfolioGUI.MainForm.resources
+E:\Programming\_FINANCE\JARE GUI\Portfolio\obj\Release\Portfolio.csproj.GenerateResource.Cache
+E:\Programming\_FINANCE\JARE GUI\Portfolio\obj\Release\Portfolio.exe
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\bin\Release\Portfolio.exe.config
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\bin\Release\Portfolio.exe
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\bin\Release\JARE.dll
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\bin\Release\R.NET.dll
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\bin\Release\JARE.pdb
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\bin\Release\R.NET.xml
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\obj\Release\Portfolio.csprojResolveAssemblyReference.cache
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\obj\Release\PortfolioGUI.MainForm.resources
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\obj\Release\Portfolio.csproj.GenerateResource.Cache
+G:\Programming\_FINANCE\Optimization\JARE_GUI\Portfolio\obj\Release\Portfolio.exe
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe.config
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csprojResolveAssemblyReference.cache
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\PortfolioGUI.MainForm.resources
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csproj.GenerateResource.Cache
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\JARE.dll
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\R.NET.dll
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\JARE.pdb
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\R.NET.xml
+H:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.exe
+G:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe.config
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe.config
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\JARE.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\R.NET.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\log4net.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\JARE.pdb
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\R.NET.pdb
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\log4net.xml
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csprojResolveAssemblyReference.cache
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\PortfolioGUI.MainForm.resources
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csproj.GenerateResource.Cache
+F:\Programming\_FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.exe
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe.config
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\JARE.dll
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\R.NET.dll
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\log4net.dll
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\ICSharpCode.SharpZipLib.dll
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\JARE.pdb
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\R.NET.pdb
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\bin\Release\log4net.xml
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csprojResolveAssemblyReference.cache
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\obj\Release\PortfolioGUI.MainForm.resources
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csproj.GenerateResource.Cache
+H:\Programming\ FINANCE\ Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.exe
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe.config
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\Portfolio.exe
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\JARE.dll
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\R.NET.dll
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\log4net.dll
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\JARE.pdb
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\JARE.dll.config
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\R.NET.pdb
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\bin\Release\log4net.xml
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csproj.AssemblyReference.cache
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\PortfolioGUI.MainForm.resources
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csproj.GenerateResource.cache
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csproj.CoreCompileInputs.cache
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.csproj.CopyComplete
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\Portfolio\obj\Release\Portfolio.exe

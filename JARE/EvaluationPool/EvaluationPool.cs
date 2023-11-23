@@ -1,0 +1,128 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using JARE.Base;
+using System.Threading;
+using System.IO;
+
+namespace JARE.EvaluationPool
+{
+    public enum STATE
+    {
+        busy,
+        error,
+        idle
+    }
+
+    public abstract class EvaluationPool
+    {
+        string error;
+        private Queue<Solution> solutionQueue = new Queue<Solution>();
+
+        protected STATE state;
+
+        protected static ManualResetEvent busy= new ManualResetEvent(false);
+        protected static ManualResetEvent idle= new ManualResetEvent(true);
+        protected static ManualResetEvent queueNotEmpty= new ManualResetEvent(false);
+
+        protected bool shouldStop;
+
+        public EvaluationPool()
+        {
+            shouldStop = false;            
+            ChangeStateTo( STATE.idle );
+        }
+
+        public void SendSolution(Solution solution)
+        {
+            lock (solutionQueue)
+            {
+                solutionQueue.Enqueue(solution);
+                if( solutionQueue.Count == 1 ) queueNotEmpty.Set();
+            }
+        }
+
+        protected Solution Dequeue()
+        {
+            lock (solutionQueue)
+            {
+                Solution solution = solutionQueue.Dequeue();
+                if( solutionQueue.Count == 0 ) queueNotEmpty.Reset();
+
+                return solution;
+            }
+        }
+
+        protected int Count()
+        {
+           return solutionQueue.Count;
+        }
+
+        public void Start()
+        {
+            shouldStop = false;
+            Thread thread = new Thread(Run);
+            thread.Start();
+        }
+
+        public void Stop()
+        {
+            shouldStop = true;
+        }
+
+        private void ChangeStateTo(STATE newState)
+        {
+            state = newState;
+            if (state == STATE.busy)
+            {
+                idle.Reset();
+                busy.Set();
+
+            }
+            if (state == STATE.idle)
+            {
+                busy.Reset();
+                idle.Set();
+            }
+            if (state == STATE.error)
+            {
+                busy.Reset();
+                idle.Set();
+                Console.WriteLine(error);
+                throw new Exception("Doslo je do greske");
+            }
+        }
+
+        public virtual void Wait()
+        {
+            if (solutionQueue.Count > 0)
+                busy.WaitOne();
+
+            idle.WaitOne();
+        }
+
+        protected void Run()
+        {
+            try
+            {
+                while (!shouldStop)
+                {
+                    queueNotEmpty.WaitOne();
+                    
+                    ChangeStateTo(STATE.busy);
+                    RunEvaluation();
+                    if (Count() == 0) ChangeStateTo(STATE.idle);
+                }
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                ChangeStateTo(STATE.error);
+            }
+        }
+
+       
+
+        protected abstract void RunEvaluation();
+    }
+}

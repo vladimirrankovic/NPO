@@ -1,0 +1,263 @@
+/// <summary> Problem.java
+/// 
+/// </summary>
+/// <author>  Antonio J. Nebro
+/// </author>
+/// <version>  1.0
+/// Created on 16 de octubre de 2006, 17:04
+/// </version>
+using System;
+using SMException = JARE.util.SMException;
+namespace JARE.Base
+{
+	
+	/// <summary> Abstract class representing a multiobjective optimization problem</summary>
+	[Serializable]
+	public abstract class Problem
+	{
+		/// <summary> Gets the number of decision variables of the problem.</summary>
+		/// <returns> the number of decision variables.
+		/// </returns>
+		/// <summary> Sets the number of decision variables of the problem.</summary>
+		/// <returns> the number of decision variables.
+		/// </returns>
+		virtual public int NumberOfVariables
+		{
+			get
+			{
+				return m_numberOfVariables;
+			}
+			set
+			{
+				m_numberOfVariables = value;
+			}
+			
+		}
+		/// <summary> Gets the the number of objectives of the problem.</summary>
+		/// <returns> the number of objectives.
+		/// </returns>
+		virtual public int NumberOfObjectives
+		{
+			get
+			{
+				return m_numberOfObjectives;
+			}
+			// getNumberOfObjectives
+			
+		}
+		/// <summary> Gets the number of side constraints in the problem.</summary>
+		/// <returns> the number of constraints.
+		/// </returns>
+		virtual public int NumberOfConstraints
+		{
+			get
+			{
+				return m_numberOfConstraints;
+			}
+			// getNumberOfConstraints
+			
+		}
+		//UPGRADE_NOTE: Respective javadoc comments were merged.  It should be changed in order to comply with .NET documentation conventions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1199'"
+		/// <summary> Returns the type of the variables of the problem.</summary>
+		/// <returns> type of the variables of the problem.
+		/// </returns>
+		/// <summary> Sets the type of the variables of the problem.</summary>
+		/// <param name="type">The type of the variables
+		/// </param>
+		virtual public SolutionType SolutionType
+		{
+			get
+			{
+				return m_solutionType;
+			}
+			// getSolutionType
+			
+			set
+			{
+				m_solutionType = value;
+			}
+			// setSolutionType
+			
+		}
+		/// <summary> Returns the problem name</summary>
+		/// <returns> The problem name
+		/// </returns>
+		virtual public string Name
+		{
+			get
+			{
+				return m_problemName;
+			}
+			
+		}
+		/// <summary> Returns the number of bits of the solutions of the problem</summary>
+		/// <returns> The number of bits solutions of the problem
+		/// </returns>
+		virtual public int NumberOfBits
+		{
+			get
+			{
+				int result = 0;
+				for (int var = 0; var < m_numberOfVariables; var++)
+				{
+					result += getLength(var);
+				}
+				return result;
+			}
+			// getNumberOfBits();
+			
+		}
+		
+		/// <summary> Defines the default precision of binary-coded variables</summary>
+		private const int DEFAULT_PRECISSION = 16;
+		
+		/// <summary> Stores the number of variables of the problem</summary>
+		protected internal int m_numberOfVariables;
+		
+		/// <summary> Stores the number of objectives of the problem</summary>
+		protected internal int m_numberOfObjectives;
+		
+		/// <summary> Stores the number of constraints of the problem</summary>
+		protected internal int m_numberOfConstraints;
+		
+		/// <summary> Stores the problem name</summary>
+		protected internal string m_problemName;
+		
+		/// <summary> Stores the type of the solutions of the problem</summary>
+		protected internal SolutionType m_solutionType;
+		
+		/// <summary> Stores the lower bound values for each variable (only if needed)</summary>
+		protected internal double[] m_lowerLimit;
+		
+		/// <summary> Stores the upper bound values for each variable (only if needed)</summary>
+		protected internal double[] m_upperLimit;
+		
+		/// <summary> Stores the number of bits used by binary-coded variables (e.g., BinaryReal
+		/// variables). By default, they are initialized to DEFAULT_PRECISION)
+		/// </summary>
+		protected internal int[] m_precision;
+		
+		/// <summary> Stores the length of each variable when applicable (e.g., Binary and 
+		/// Permutation variables)
+		/// </summary>
+		protected internal int[] m_length;
+		
+		/// <summary> Stores the type of each variable</summary>
+		public System.Type[] m_variableType;
+		
+		/// <summary> Constructor. </summary>
+		public Problem()
+		{
+			m_solutionType = null;
+		} // Problem
+		
+		/// <summary> Constructor. </summary>
+		public Problem(SolutionType solutionType)
+		{
+			m_solutionType = solutionType;
+            
+		} // Problem
+		
+		/// <summary> Gets the lower bound of the ith variable of the problem.</summary>
+		/// <param name="i">The index of the variable.
+		/// </param>
+		/// <returns> The lower bound.
+		/// </returns>
+		public virtual double getLowerLimit(int i)
+		{
+			return m_lowerLimit[i];
+		} // getLowerLimit
+		
+		/// <summary> Gets the upper bound of the ith variable of the problem.</summary>
+		/// <param name="i">The index of the variable.
+		/// </param>
+		/// <returns> The upper bound.
+		/// </returns>
+		public virtual double getUpperLimit(int i)
+		{
+			return m_upperLimit[i];
+		} // getUpperLimit 
+		
+		/// <summary> Evaluates a <code>Solution</code> object.</summary>
+		/// <param name="solution">The <code>Solution</code> to evaluate.
+		/// </param>
+		public abstract void  evaluate(Solution solution);
+		
+		/// <summary> Evaluates the overall constraint violation of a <code>Solution</code> 
+		/// object.
+		/// </summary>
+		/// <param name="solution">The <code>Solution</code> to evaluate.
+		/// </param>
+		public virtual void  evaluateConstraints(Solution solution)
+		{
+			// The default behavior is to do nothing. Only constrained problems have to
+			// re-define this method
+		} // evaluateConstraints
+		
+		/// <summary> Returns the number of bits that must be used to encode binary-real variables</summary>
+		/// <returns> the number of bits.
+		/// </returns>
+		public virtual int getPrecision(int var)
+		{
+			return m_precision[var];
+		} // getPrecision
+		
+		/// <summary> Returns array containing the number of bits that must be used to encode 
+		/// binary-real variables.
+		/// </summary>
+		/// <returns> the number of bits.
+		/// </returns>
+		public virtual int[] getPrecision()
+		{
+			return m_precision;
+		} // getPrecision
+		
+		/// <summary> Sets the array containing the number of bits that must be used to encode 
+		/// binary-real variables.
+		/// </summary>
+		/// <param name="precision">The array
+		/// </param>
+		public virtual void setPrecision(int[] precision)
+		{
+			m_precision = precision;
+		} // getPrecision
+		
+		/// <summary> Returns the length of the variable.</summary>
+		/// <returns> the variable length.
+		/// </returns>
+		public virtual int getLength(int var)
+		{
+			if (m_length == null)
+				return DEFAULT_PRECISSION;
+			return m_length[var];
+		} // getLength
+
+        //VLADA
+        /// <summary> Creates initial population.</summary>
+        /// <returns> the initial population.
+        /// </returns>
+        public virtual SolutionSet createInitialPopulation(int populationSize)
+        {
+            SolutionSet population= new SolutionSet();
+			Solution newSolution;
+			for (int i = 0; i < populationSize; i++)
+			{
+				newSolution = new Solution(this);
+				population.add(newSolution);
+			} //for
+            return population;
+        } // createInitialPopulation
+
+        //VISNJA
+        public virtual void PrintGenerationReport(SolutionSet population, SolutionSet bestFront, int genNO) { }
+        public virtual void PrintGenerationReport(SolutionSet population, Solution bestSolution, int genNO) {}
+        public SolutionSet ReadStartingPopulation(string file) { return null; } //Slavisa dodao zbog builda
+        protected System.IO.DirectoryInfo m_directory;
+        protected System.IO.DirectoryInfo m_subdirectory;
+
+        //Slavisa
+        public virtual void CreateAlgorithmInfo(AlgorithmInfo algorithmInfo) { }
+        public virtual void CreateAlgorithmInfoNew(AlgorithmInfo algorithmInfo) { }
+
+	} // Problem
+}

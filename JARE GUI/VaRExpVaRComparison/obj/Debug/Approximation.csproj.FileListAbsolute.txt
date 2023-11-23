@@ -1,0 +1,56 @@
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\bin\Debug\Approximation.exe
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\bin\Debug\Approximation.pdb
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\bin\Debug\AForge.Controls.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\bin\Debug\AForge.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\bin\Debug\AForge.Genetic.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\bin\Debug\AForge.Math.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\bin\Debug\AForge.Video.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\obj\Debug\ResolveAssemblyReference.cache
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\obj\Debug\Approximation.MainForm.resources
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\obj\Debug\Approximation.csproj.GenerateResource.Cache
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\obj\Debug\Approximation.exe
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Approximation\obj\Debug\Approximation.pdb
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\obj\Debug\Approximation.exe
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\obj\Debug\Approximation.pdb
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\obj\Debug\ResolveAssemblyReference.cache
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\obj\Debug\Approximation.MainForm.resources
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\obj\Debug\Approximation.csproj.GenerateResource.Cache
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\bin\Debug\Approximation.exe
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\bin\Debug\Approximation.pdb
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\bin\Debug\AForge.Controls.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\bin\Debug\AForge.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\bin\Debug\AForge.Genetic.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\bin\Debug\AForge.Math.dll
+H:\Programming\AForge.NET 2.0.1\Samples\Genetic\Finance\bin\Debug\AForge.Video.dll
+H:\Programming\Finance\Svensson\GeneticSvensson\obj\Debug\Approximation.exe
+H:\Programming\Finance\Svensson\GeneticSvensson\obj\Debug\ResolveAssemblyReference.cache
+H:\Programming\Finance\Svensson\GeneticSvensson\obj\Debug\Approximation.MainForm.resources
+H:\Programming\Finance\Svensson\GeneticSvensson\obj\Debug\Approximation.csproj.GenerateResource.Cache
+H:\Programming\Finance\Svensson\GeneticSvensson\bin\Debug\Approximation.exe
+H:\Programming\Finance\Svensson\GeneticSvensson\bin\Debug\Approximation.pdb
+H:\Programming\Finance\Svensson\GeneticSvensson\bin\Debug\AForge.Video.dll
+H:\Programming\Finance\Svensson\GeneticSvensson\obj\Debug\Approximation.pdb
+H:\Programming\ FINANCE\Svensson\GeneticSvensson\obj\Debug\Approximation.exe
+H:\Programming\ FINANCE\Svensson\GeneticSvensson\obj\Debug\Approximation.pdb
+H:\Programming\ FINANCE\Svensson\GeneticSvensson\bin\Debug\Approximation.exe
+H:\Programming\ FINANCE\Svensson\GeneticSvensson\bin\Debug\Approximation.pdb
+H:\Programming\ FINANCE\Svensson\GeneticSvensson\bin\Debug\AForge.Video.dll
+H:\Programming\ FINANCE\Svensson\GeneticSvensson\obj\Debug\ResolveAssemblyReference.cache
+H:\Programming\ FINANCE\Svensson\GeneticSvensson\obj\Debug\Approximation.MainForm.resources
+H:\Programming\ FINANCE\Svensson\GeneticSvensson\obj\Debug\Approximation.csproj.GenerateResource.Cache
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\Approximation.exe
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\Approximation.pdb
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\ResolveAssemblyReference.cache
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\Approximation.MainForm.resources
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\Approximation.csproj.GenerateResource.Cache
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Debug\Approximation.exe
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Debug\Approximation.pdb
+H:\Programming\ FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Debug\AForge.Video.dll
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\Approximation.exe
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\Approximation.pdb
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Debug\Approximation.exe
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Debug\Approximation.pdb
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\bin\Debug\AForge.Video.dll
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\ResolveAssemblyReference.cache
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\Approximation.MainForm.resources
+H:\Programming\_FINANCE\ETF_Funds_Optimization\GeneticETFFOptimization\obj\Debug\Approximation.csproj.GenerateResource.Cache

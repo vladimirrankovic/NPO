@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using JARE.Base;
+using JARE.Base.solutionType;
+using JARE.problems;
+
+namespace JARE.problems
+{
+    public class PortfolioOptimizationMO : PortfolioOptimization
+    {
+        public PortfolioOptimizationMO(int numberOfObjectives, System.Collections.Generic.List<TimeSerie> Assets, 
+                                     DateTime evaluationEndDate, int evaluationPeriod, int ReturnPeriod,
+                                     double targetRate, double varThreshold, EvaluationCriteria[] evaluationCriteria,
+                                     DecisionVariableType variableType) : base(Assets,
+                                     evaluationEndDate, evaluationPeriod, ReturnPeriod,
+                                     targetRate, varThreshold, evaluationCriteria, variableType)
+		{
+            m_numberOfObjectives = numberOfObjectives;
+        }
+
+        
+        public override void evaluate(Solution solution)
+        {
+            ponder.Clear();
+            for (int i = 0; i < m_numberOfVariables; i++) ponder.Add(solution.DecisionVariables[i]);
+
+            GeneratePortfolio();
+            int c = 0;
+            foreach (EvaluationCriteria EC in evaluationCriteria)
+            {
+                double objectiveValue;
+                objectiveValue = EvaluationFunction(EC);
+                solution.setObjective(c++, objectiveValue);
+            }
+        }
+
+        //private double EvaluationFunction(EvaluationCriteria EC)
+        //{
+        //    double evaluationParameter = 0.0;
+        //    int evaluationPeriodDuration = evaluationPeriod * pointCountPerMonth;
+        //    int previousPeriodDuration = ReturnPeriod * pointCountPerMonth;//Return period
+        //    double averageReturn;
+        //    switch (EC)
+        //    {
+        //        case EvaluationCriteria.maximalAverageReturn:
+        //            averageReturn = GenerateReturnList(evaluationPeriodDuration, previousPeriodDuration, ReturnList);
+        //            evaluationParameter = -averageReturn;//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.minimalStandardDeviation:
+        //            averageReturn = GenerateReturnList(evaluationPeriodDuration, previousPeriodDuration, ReturnList);
+        //            evaluationParameter = CalculateStandardDeviationOnPopulation(ReturnList, averageReturn);//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.maximalSharpIndex:
+        //            averageReturn = GenerateReturnList(evaluationPeriodDuration, previousPeriodDuration, ReturnList);
+        //            double stdevp = CalculateStandardDeviationOnPopulation(ReturnList, averageReturn);
+        //            evaluationParameter = -CalculateSharpIndex(averageReturn, stdevp, targetRate);//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.maximalSortino:
+        //            averageReturn = GenerateReturnList(evaluationPeriodDuration, previousPeriodDuration, ReturnList);
+        //            double downsideRisk = CalculateDownsideRiskOnPopulation(ReturnList, targetRate);
+        //            evaluationParameter = -CalculateSortino(averageReturn, downsideRisk, targetRate);//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.maximalVaR:
+        //            double tmp = 0.0;
+        //            averageReturn = GenerateReturnList(evaluationPeriodDuration, previousPeriodDuration, ReturnList);
+        //            evaluationParameter = -CalculateVaR(ReturnList, varThreshold, ref tmp);//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.maximalcVaR:
+        //            double cVaR = 0.0;
+        //            averageReturn = GenerateReturnList(evaluationPeriodDuration, previousPeriodDuration, ReturnList);
+        //            CalculateVaR(ReturnList, varThreshold, ref cVaR);
+        //            evaluationParameter = -cVaR;//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.maximalExpWeightedVaR:
+        //            tmp = 0.0;
+        //            averageReturn = GenerateReturnList(evaluationPeriodDuration, previousPeriodDuration, ReturnList);
+        //            evaluationParameter = -CalculateExpWeightedVaR(ReturnList, varThreshold, ref tmp);//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.maximalExpWeightedcVaR:
+        //            double expWeightedcVaR = 0.0;
+        //            averageReturn = GenerateReturnList(evaluationPeriodDuration, previousPeriodDuration, ReturnList);
+        //            CalculateExpWeightedVaR(ReturnList, varThreshold, ref expWeightedcVaR);
+        //            evaluationParameter = -expWeightedcVaR;//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.maximalSkewness:
+        //            double Skewness = 0.0;
+        //            Skewness = CalculateSkewness(evaluationPeriodDuration, previousPeriodDuration);
+        //            evaluationParameter = -Skewness;//MO odredjuje minimum
+        //            break;
+        //        case EvaluationCriteria.maximalKurtosis:
+        //            double Kurtosis = 0.0;
+        //            Kurtosis = CalculateKurtosis(evaluationPeriodDuration, previousPeriodDuration);
+        //            evaluationParameter = -Kurtosis;//MO odredjuje minimum
+        //            break;
+        //    }
+        //    return evaluationParameter;
+        //}
+    }
+}

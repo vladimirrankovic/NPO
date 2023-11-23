@@ -1,0 +1,72 @@
+/// <summary> CrossoverFactory.java
+/// 
+/// </summary>
+/// <author>  Juanjo Durillo
+/// </author>
+/// <version>  1.1
+/// </version>
+using System;
+//using PropUtils = JARE.gui.utils.PropUtils;
+using Configuration = JARE.util.Configuration;
+using SMException = JARE.util.SMException;
+namespace JARE.Base.operators.mutation
+{
+	
+	/// <summary> Class implementing a mutation factory.</summary>
+	public class MutationFactory
+	{
+		
+		/// <summary> Gets a crossover operator through its name.</summary>
+		/// <param name="name">of the operator
+		/// </param>
+		/// <returns> the operator
+		/// </returns>
+		/// <throws>  SMException  </throws>
+		public static Mutation getMutationOperator(string name)
+		{
+			
+			if (name.ToUpper().Equals("PolynomialMutation".ToUpper()))
+				return new PolynomialMutation(20);
+			else if (name.ToUpper().Equals("BitFlipMutation".ToUpper()))
+				return new BitFlipMutation();
+            else if (name.ToUpper().Equals("SwapMutation".ToUpper()))
+                return new SwapMutation();
+            else if (name.ToUpper().Equals("UniformMutation".ToUpper()))
+                return new UniformMutation();
+            else if (name.ToUpper().Equals("WeightsUniformMutation".ToUpper()))
+                return new WeightsMutation(name);
+            else if (name.ToUpper().Equals("ReplacementMutation".ToUpper()))
+                return new ReplacementMutation();
+            else
+			{
+				Configuration.m_logger.WriteLog("Operator '" + name + "' not found ");
+                //System.Type cls = typeof(System.String);
+				//UPGRADE_TODO: The equivalent in .NET for method 'java.lang.Class.getName' may return a different value. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1043'"
+                string name2 = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
+				throw new SMException("Exception in " + name2 + ".getMutationOperator()");
+			}
+		} // getMutationOperator
+		
+        // Visnja: Stavljeno pod komentar jer se nigde ne koristi, a nije rastumaceno kako funkcionise
+
+		//UPGRADE_ISSUE: Class hierarchy differences between 'java.util.Properties' and 'System.Collections.Specialized.NameValueCollection' may cause compilation errors. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1186'"
+        //public static Mutation getMutationOperator(System.String name, System.Collections.Generic.Dictionary<string, string> properties)
+        //{
+			
+        //    if (name.ToUpper().Equals("PolynomialMutation".ToUpper()))
+        //        return new PolynomialMutation(PropUtils.getPropertiesWithPrefix(properties, name + "."));
+        //    else if (name.ToUpper().Equals("BitFlipMutation".ToUpper()))
+        //        return new BitFlipMutation(PropUtils.getPropertiesWithPrefix(properties, name + "."));
+        //    else if (name.ToUpper().Equals("SwapMutation".ToUpper()))
+        //        return new SwapMutation(PropUtils.getPropertiesWithPrefix(properties, name + "."));
+        //    else
+        //    {
+        //        Configuration.m_logger.WriteLog("Operator '" + name + "' not found ");
+        //        //System.Type cls = typeof(System.String);
+        //        //UPGRADE_TODO: The equivalent in .NET for method 'java.lang.Class.getName' may return a different value. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1043'"
+        //        string name2 = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
+        //        throw new SMException("Exception in " + name2 + ".getMutationOperator()");
+        //    }
+        //} // getMutationOperator
+	} // MutationFactory
+}

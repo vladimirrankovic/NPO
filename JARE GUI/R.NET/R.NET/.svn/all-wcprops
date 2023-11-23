@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/his-svn/!svn/ver/3625/trunk/src/UserServer/HisReg/lib/R.NET/R.NET
+END
+BuiltinFunction.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/BuiltinFunction.cs
+END
+Closure.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Closure.cs
+END
+DataFrameRow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/DataFrameRow.cs
+END
+RawVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/RawVector.cs
+END
+RawMatrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/RawMatrix.cs
+END
+IntegerVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/IntegerVector.cs
+END
+IntegerMatrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/IntegerMatrix.cs
+END
+Language.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Language.cs
+END
+DataFrame.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/DataFrame.cs
+END
+REngineExtension.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/REngineExtension.cs
+END
+NumericVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/NumericVector.cs
+END
+Function.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Function.cs
+END
+NumericMatrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/NumericMatrix.cs
+END
+REngine.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/REngine.cs
+END
+LateBoundUnmanagedDll.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/LateBoundUnmanagedDll.cs
+END
+ProtectedPointer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/ProtectedPointer.cs
+END
+ComplexVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/ComplexVector.cs
+END
+ComplexMatrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/ComplexMatrix.cs
+END
+SymbolicExpressionExtension.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/SymbolicExpressionExtension.cs
+END
+Expression.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Expression.cs
+END
+SymbolicExpression.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/SymbolicExpression.cs
+END
+Utility.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Utility.cs
+END
+CharacterVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/CharacterVector.cs
+END
+R.NET.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/R.NET.csproj
+END
+CharacterMatrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/CharacterMatrix.cs
+END
+ExpressionVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/ExpressionVector.cs
+END
+SpecialFunction.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/SpecialFunction.cs
+END
+Pairlist.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Pairlist.cs
+END
+ParseException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/ParseException.cs
+END
+LogicalVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/LogicalVector.cs
+END
+GenericVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/GenericVector.cs
+END
+LogicalMatrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/LogicalMatrix.cs
+END
+Vector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Vector.cs
+END
+InternalString.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/InternalString.cs
+END
+Matrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Matrix.cs
+END
+Environment.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Environment.cs
+END
+Symbol.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/Symbol.cs
+END
+DynamicVector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/his-svn/!svn/ver/3616/trunk/src/UserServer/HisReg/lib/R.NET/R.NET/DynamicVector.cs
+END

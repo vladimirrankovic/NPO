@@ -1,0 +1,75 @@
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+G:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+G:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+G:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+G:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+G:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csprojResolveAssemblyReference.cache
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+F:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+H:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+H:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+H:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+H:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+H:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+H:\Programming\_FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+F:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+F:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+F:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+F:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+F:\Programming\_FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csprojResolveAssemblyReference.cache
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+H:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+F:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+F:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+F:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+F:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csprojResolveAssemblyReference.cache
+F:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+F:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+E:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+E:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+E:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+E:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csprojResolveAssemblyReference.cache
+E:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+E:\Programming\ FINANCE\ Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+E:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+E:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+E:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+E:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+E:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+H:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+H:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+H:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+H:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csprojResolveAssemblyReference.cache
+H:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+H:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+E:\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csprojResolveAssemblyReference.cache
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csproj.CoreCompileInputs.cache
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb
+C:\Users\vladi\Google Drive (vladimir.rankovic@uni.kg.ac.rs)\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csproj.AssemblyReference.cache
+C:\Users\vladi\Google Drive UNIKG\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll.config
+C:\Users\vladi\Google Drive UNIKG\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.dll
+C:\Users\vladi\Google Drive UNIKG\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\bin\x86\Debug\R.NET.pdb
+C:\Users\vladi\Google Drive UNIKG\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csproj.AssemblyReference.cache
+C:\Users\vladi\Google Drive UNIKG\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.csproj.CoreCompileInputs.cache
+C:\Users\vladi\Google Drive UNIKG\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.dll
+C:\Users\vladi\Google Drive UNIKG\Programming\FINANCE\Optimization\JARE GUI\R.NET\R.NET\obj\x86\Debug\R.NET.pdb

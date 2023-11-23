@@ -1,0 +1,107 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using JARE.Base;
+
+
+namespace JARE.EvaluationPool
+{
+    public class EvaluationPoolForBinder : EvaluationPool
+    {
+        
+        
+        IWBEvaluation problem;
+        string script, dir, varFile;
+        int errorCounter = 0;
+        int numOfThreadsAvailable;
+        ManualResetEvent[] workerIsFree;
+
+        int[] threads;
+        public EvaluationPoolForBinder(IWBEvaluation problem, string script, string dir, string varFile, int numOfWorkers)
+            : base()
+        {
+            this.problem = problem;
+            this.script = script;
+            this.dir = dir;
+            this.varFile = varFile;
+            
+            this.numOfThreadsAvailable = numOfWorkers;
+            workerIsFree = new ManualResetEvent[this.numOfThreadsAvailable];
+
+            
+            this.threads = new int[numOfThreadsAvailable];
+            for (int i = 0; i < numOfThreadsAvailable; i++)
+            {
+                threads[i] = 1;
+            }
+        }
+
+        protected override void RunEvaluation()
+        {
+            for (int i = 0; i < numOfThreadsAvailable; i++)
+            {
+                workerIsFree[i] = new ManualResetEvent(true);
+            }
+            int freeThreadIndex = 0;
+            WorkerTaskForBinder task;
+            while (Count() > 0)
+                {
+                    Solution solution = Dequeue();
+                    task = new WorkerTaskForBinder(solution, workerIsFree[freeThreadIndex], script, varFile, dir, threads[freeThreadIndex],((Problem)problem).m_numberOfObjectives);
+                    workerIsFree[freeThreadIndex].Reset();
+                    ThreadPool.QueueUserWorkItem(Do, task);
+
+                    freeThreadIndex = WaitHandle.WaitAny(workerIsFree);
+
+                }
+            WaitHandle.WaitAll(workerIsFree);
+            
+        }
+
+        private void Do(Object o)
+        {
+            EvaluationResult er;
+            WorkerTaskForBinder s = (WorkerTaskForBinder)o;
+            
+            
+            //TimeSpan UnixTimeSpan;
+
+            try
+            {
+                //Console.WriteLine("Task sent to " + s.threadNo);
+                er = s.ExecuteScript(s.Solution);
+
+                if (er.Message.Contains("OK") || er.Message.Contains("ERROR"))
+                {
+                    //goodCounter++;
+                    Console.WriteLine(er.Message + " ------------------------ ");
+                    problem.JobResultsToObjectives(er, s.Solution);
+                    
+                   // UnixTimeSpan = (DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0));
+                    //problem.PrintResultArrivalTime((long)UnixTimeSpan.TotalSeconds);  
+                   
+                }
+                else if (er.Message.Contains("FAILED"))
+                {
+                    //errorCounter++;
+                    Console.WriteLine("FAILED Error: " + er.Message);
+                    SendSolution(s.Solution);
+                    Thread.Sleep(10000);
+                }
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Other Error: " + e.Message + " " + errorCounter);
+                SendSolution(s.Solution);
+                Thread.Sleep(10000);
+            }
+            finally
+            {
+                s.a.Set();
+            }
+        }
+    }
+}

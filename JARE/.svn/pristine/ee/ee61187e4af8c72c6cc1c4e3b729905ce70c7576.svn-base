@@ -1,0 +1,8 @@
+# Putanja do run_exe fajla
+Path = ./run_exe.sh
+
+# Specificna poruka koju vraca worker
+Message = 
+
+
+

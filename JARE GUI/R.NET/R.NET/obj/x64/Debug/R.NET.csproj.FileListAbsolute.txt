@@ -1,0 +1,10 @@
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\bin\x64\Debug\R.NET.dll
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\bin\x64\Debug\R.NET.pdb
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\obj\x64\Debug\ResolveAssemblyReference.cache
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\obj\x64\Debug\R.NET.dll
+D:\HIS\trunk\src\UserServer\HisReg\lib\R.NET\R.NET\obj\x64\Debug\R.NET.pdb
+K:\Programming\_FINANCE\Optimization\JARE GUI\VaRGARCHOptimization\R.NET\R.NET\bin\x64\Debug\R.NET.dll
+K:\Programming\_FINANCE\Optimization\JARE GUI\VaRGARCHOptimization\R.NET\R.NET\bin\x64\Debug\R.NET.pdb
+K:\Programming\_FINANCE\Optimization\JARE GUI\VaRGARCHOptimization\R.NET\R.NET\obj\x64\Debug\ResolveAssemblyReference.cache
+K:\Programming\_FINANCE\Optimization\JARE GUI\VaRGARCHOptimization\R.NET\R.NET\obj\x64\Debug\R.NET.dll
+K:\Programming\_FINANCE\Optimization\JARE GUI\VaRGARCHOptimization\R.NET\R.NET\obj\x64\Debug\R.NET.pdb

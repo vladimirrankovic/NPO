@@ -1,0 +1,240 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using JARE.Base;
+using JARE.Base.operators.comparator;
+using Algorithm = JARE.Base.Algorithm;
+using RouletteWheelSelection = JARE.Base.operators.selection.RouletteWheelSelection;
+using XReal = JARE.util.wrapper.XReal;
+using JARE.util;
+
+namespace JARE.metaheuristics.singleObjective.geneticAlgorithm
+{
+    // klasa koja je ista kao gGA samo sto sortira solution-e na osnovu fitness-a
+
+    public class PortfolioOptimizationGA : Algorithm
+    {
+        // random number generator
+        private static Random rand = new Random();
+        protected int populationSize;
+        protected int maxEvaluations;
+        //protected int evaluations;
+        protected double crossoverRate;
+        protected double mutationRate;
+
+        protected SolutionSet population;
+        protected SolutionSet resultPopulation;
+        protected SolutionSet offspringPopulation;
+
+        protected Operator mutationOperator;
+        protected Operator crossoverOperator;
+        protected Operator selectionOperator;
+        protected Operator selectionBestSolution;
+
+        //protected System.Collections.Generic.IComparer<JARE.Base.Solution> comparator;
+
+        private Problem m_problem;
+		
+		/// <summary> 
+		/// Constructor
+		/// Create a new GGA instance.
+		/// </summary>
+		/// <param name="problem">Problem to solve.
+		/// </param>
+
+        public PortfolioOptimizationGA(Problem problem)
+		{
+			this.m_problem = problem;
+		} // GGA
+		
+		/// <summary> Execute the GGA algorithm</summary>
+		/// <throws>  SMException  </throws>
+
+        public void Init()
+        {
+            //this.comparator = new ObjectiveComparator(0); // Single objective comparator
+            // Read the params
+            populationSize = ((System.Int32)this.getInputParameter("populationSize"));
+            maxEvaluations = ((System.Int32)this.getInputParameter("maxEvaluations"));
+
+            // Initialize the variables
+            population = new SolutionSet(populationSize);
+            resultPopulation = new SolutionSet(populationSize*5);
+
+            // Read the operators
+            mutationOperator = this.m_operators["mutation"];
+            crossoverOperator = this.m_operators["crossover"];
+            selectionOperator = this.m_operators["selectionPopulation"];
+            //selectionOperator.setParameter("size", populationSize - 1);
+            selectionBestSolution = this.m_operators["selection"];
+            //selectionMethod = new RouletteWheelSelection(populationSize);
+
+            crossoverRate = (double)crossoverOperator.getParameter("probability");
+
+            // Create the initial population
+            Solution newIndividual;
+            for (int i = 0; i < populationSize; i++)
+            {
+                newIndividual = new Solution(m_problem);
+                InitNewIndividual(newIndividual);
+                m_problem.evaluate(newIndividual);
+                //evaluations++;
+                population.add(newIndividual);
+            } //for   
+
+            int bestSolutionIndex = (int)selectionBestSolution.execute(population);
+            Solution bestSolution = (Solution)population.getSolution(bestSolutionIndex);
+            population.remove(bestSolutionIndex);
+            population.add(bestSolution);
+        }
+
+        public void InitNewIndividual(Solution newIndividual)
+        {
+            Random sampleGenerator = new Random();
+            Random chromosomeGenerator = new Random();
+            int[] choosenVariables = new int[newIndividual.numberOfVariables()];
+            int counter = 0;
+            int sample;
+            double valueLimit = 1.0;
+
+            for (int i = 0; i < newIndividual.numberOfVariables(); i++) newIndividual.DecisionVariables[i].setValue(0.0);
+            while (counter < newIndividual.numberOfVariables() - 1)
+            {
+                sample = sampleGenerator.Next(newIndividual.numberOfVariables());
+                if (choosenVariables[sample] == 0)
+                {
+                    newIndividual.DecisionVariables[sample].setValue(chromosomeGenerator.NextDouble() * valueLimit);
+                    newIndividual.DecisionVariables[sample].setLowerBound(0.0);
+                    newIndividual.DecisionVariables[sample].setUpperBound(1.0);
+                    valueLimit = valueLimit - newIndividual.DecisionVariables[sample].getValue();
+                    counter++;
+                    choosenVariables[sample] = 1;
+                }
+            }
+
+            for (int i = 0; i < newIndividual.numberOfVariables(); i++)
+            {
+                if (newIndividual.DecisionVariables[i].getValue() == 0.0)
+                {
+                    newIndividual.DecisionVariables[i].setValue(valueLimit);
+                    newIndividual.DecisionVariables[i].setLowerBound(0.0);
+                    newIndividual.DecisionVariables[i].setUpperBound(1.0);
+                    break;
+                }
+            }            
+        }
+
+        public virtual void Crossover()
+        {
+            // crossover
+            for (int i = 1; i < populationSize; i += 2)
+            {
+                // generate next random number and check if we need to do crossover
+                if (rand.NextDouble() <= crossoverRate)
+                {
+                    Solution[] parents = new Solution[2];
+
+                    parents[0] = (Solution)population.getSolution(i - 1);
+                    parents[1] = (Solution)population.getSolution(i);
+
+                    // Crossover
+                    Solution[] offspring = (Solution[])crossoverOperator.execute(parents);
+
+                    // Evaluation of the new individual
+                    m_problem.evaluate(offspring[0]);
+                    m_problem.evaluate(offspring[1]);
+
+                    // add two new offsprings to the population
+                    resultPopulation.add(offspring[0]);
+                    resultPopulation.add(offspring[1]);
+                }
+            }
+        }
+
+        private void Normalize(Solution[] offspring)
+        {
+            for (int j = 0; j < offspring.Length; j++)
+            {
+                Normalize(offspring[j]);
+            }
+        }
+
+        private void Normalize(Solution offspring)
+        {
+            XReal offs = new XReal(offspring);
+            int numberOfVariables = offs.NumberOfDecisionVariables;
+            double variableSum = 0.0;
+            for (int i = 0; i < numberOfVariables; i++) variableSum += offs.getValue(i);
+            if (variableSum == 0.0)
+            {
+                Random sampleGenerator = new Random();
+                int sample = sampleGenerator.Next(numberOfVariables);
+                offs.setValue(sample, 1.0);
+            }
+            else
+            {
+                for (int i = 0; i < numberOfVariables; i++) offs.setValue(i, offs.getValue(i) / variableSum);
+            }
+        }
+
+        public virtual void Mutate()
+        {
+            // mutate
+            for (int i = 0; i < populationSize; i++)
+            {
+                Solution s = new Solution(population.getSolution(i));
+                Solution newSolution = (Solution)mutationOperator.execute(s);
+
+                Normalize(newSolution);
+               
+                // calculate fitness of the mutant
+                m_problem.evaluate(newSolution);
+
+                // add mutant to the population
+                resultPopulation.add(newSolution);
+            }
+        }
+
+        public override SolutionSet execute()
+		{
+            double previousFitnessValue = 0.0;
+            double currentFitnessValue = 0.0;
+            double tolerance = System.Math.Pow(10, -3);
+
+            int j = 0;
+            while(j < maxEvaluations)
+            {
+                resultPopulation.clear();
+                int bestSolutionIndex = (int)selectionBestSolution.execute(population);
+                Solution bestSolution = (Solution)population.getSolution(bestSolutionIndex);
+
+                Crossover();
+                Mutate();
+
+                selectionOperator.execute(resultPopulation);
+                resultPopulation.add(bestSolution);
+
+                bestSolutionIndex = (int)selectionBestSolution.execute(resultPopulation);
+                bestSolution = (Solution)resultPopulation.getSolution(bestSolutionIndex);
+                resultPopulation.remove(bestSolutionIndex);
+
+                population.clear();
+                for (int i = 0; i < resultPopulation.size(); i++)
+                {
+                    population.add(resultPopulation.getSolution(i));
+                }
+
+                population.add(bestSolution);
+                currentFitnessValue = bestSolution.Fitness;
+                if (System.Math.Abs(currentFitnessValue - previousFitnessValue) > System.Math.Abs(currentFitnessValue) * tolerance)
+                {
+                    j = 0;
+                    previousFitnessValue = currentFitnessValue;
+                }
+                else j++;
+            }
+
+            return population;
+		} // execute
+    }
+}
