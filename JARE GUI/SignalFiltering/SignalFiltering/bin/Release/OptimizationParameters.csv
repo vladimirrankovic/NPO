@@ -1,7 +1,0 @@
-Population size,500
-Generations,1000
-Mutation probability,0.3
-Mutation perturbation,0.2
-Crossover probability,1
-Plateau Tolerance,0.0001
-Max Plateau Generations,200
